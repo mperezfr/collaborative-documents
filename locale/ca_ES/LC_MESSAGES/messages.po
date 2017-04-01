@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 23:22+0200\n"
+"POT-Creation-Date: 2017-04-01 02:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -314,7 +314,7 @@ msgid "Registrarse"
 msgstr "Registrar-se"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:228
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:33
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:35
 #: account/index.php:282
 msgid "Aviso legal"
 msgstr "Avís legal"
@@ -422,7 +422,11 @@ msgstr "Enviar"
 msgid "En estos momentos no se pueden hacer nuevas propuestas"
 msgstr "En aquestos moments no es poden fer noves propostes"
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:43
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:41
+msgid "Código fuente"
+msgstr "Codi font"
+
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:52
 msgid ""
 "Utilizamos cookies para asegurar que damos la mejor experiencia al usuario "
 "en nuestra página web. Al utilizar nuestros servicios, aceptas el uso que "
@@ -432,7 +436,7 @@ msgstr ""
 "l'usuari en la nostra pàgina web. En utilitzar els nostres serveis, acceptes "
 "l'ús que fem de les cookies."
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:46
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:55
 msgid "ok"
 msgstr ""
 
