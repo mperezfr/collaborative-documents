@@ -5,7 +5,7 @@ Herramienta para la elaboración de un programa colaborativo basado en propuesta
 
 Elaborada a partir de la Herramienta para la elaboración del programa colaborativo **Castelló en Moviment** CSeMV
 
-Elaborada a partir de la Herramienta para la elaboración del programa colaborativo de **Ganemos Zaragoza**.
+Elaborada a partir de la Herramienta para la elaboración del programa colaborativo de **Ganemos Zaragoza** desarrollado por  Guillermo Lázaro (https://guillermolazaro.com/)
 
 
 Instalación:
