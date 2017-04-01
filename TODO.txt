@@ -1,0 +1,20 @@
+TODO: 
+
+Uso de cookies, aviso emergente.
+
+Hacer copia automática de la base de datos cada X minutos
+
+Cambiar la página 404
+
+
+Hacer script para detectar lineas repetidas en messages.po
+Hacer script para borrar lineas de comentarios de messages.po de /tmp/cache
+
+
+## TODO:
+
+  Actualizar automáticamente el mensaje ???
+  
+* Has realizado un total de 0 votos de un máximo de 10
+* 
+  cuando se pincha en a favor o en contra, igual que lo hace el número de likes

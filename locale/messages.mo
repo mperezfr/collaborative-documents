@@ -1,0 +1,1 @@
+ca_ES/LC_MESSAGES/messages.mo

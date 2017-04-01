@@ -1,0 +1,34 @@
+{% 
+set entity = {name : 'Nombre',
+                 web : 'https://www/',
+                 thisweb : 'https://www/this', 
+                 contactLink : 'https://www/contact',
+                 contactText : 'Contacto',
+                 copyrigthyear : '2017',
+                 logo : 'static/images/logo.png',
+                 favicon : ''
+   }  
+%}
+
+{# thisweb :  the url of the web with this app #}
+
+{% set metainfo = {
+   descriptions : {d1:"desc1" ,
+                   d2:"desc2"},
+   keywords     : {k1:"key1" ,
+                   k2:"key2"}
+   
+  }
+%}
+
+{%
+                
+set metainfo = {
+   descriptions : {d1: 'a', d1: 'b'}
+}
+
+
+%}
+
+{% block webpage %}
+{% endblock %}

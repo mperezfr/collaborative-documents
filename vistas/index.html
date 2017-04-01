@@ -1,0 +1,612 @@
+{% extends "base.html" %}
+
+{#{% block title %}{% trans %} Com vols Podem? {% endtrans %}{% endblock %} #}
+{% block title %}{% trans %} Texto del título principal {% endtrans %}{% endblock %} 
+
+
+{% block scripts %}
+<script>
+	$(document).ready(function() {
+
+		$("img.sector").mouseover(function(){
+			$(this).css('opacity',1);
+	 	});
+	 	$("img.sector").mouseout(function(){
+			$(this).css('opacity',0.9);
+		});
+		$("img.sector").click(function() { 
+			var i=$(this).attr('id');
+            document.location = "sector.php?sector="+ i;
+	 	});
+		$(".barrio").mouseover(function(){
+			$(this).attr('fill-opacity',1);
+	 	});
+	 	$(".barrio").mouseout(function(){
+			$(this).attr('fill-opacity',0.5);	
+		});
+		$(".barrio").click(function() { 
+			var i=$(this).attr('id');
+            document.location = "barrio.php?barrio="+ i;
+	 	});
+
+	$(".sector").each(function() {
+		var sector = $(this).text();
+		sector = sector.replace(/-/g, ' ');
+		$(this).html('<strong>'+sector+'</strong>');
+	});
+
+   /*
+	$(".barrio").each(function() {
+		var barrio = $(this).text();
+		if (barrio=="montanana"){
+			barrio=barrio.replace("montanana","montañana");
+		}else{
+			barrio = barrio.replace(/-/g, ' ');
+		}
+		$(this).html('<strong>'+barrio+'</strong>');
+	});
+	*/
+});
+
+</script>
+
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-xs-12">
+			{# <h1 class="center">{% trans %} Com vols Podem? {% endtrans %}</h1> #}
+			<h1 class="center">{% trans %} Texto del título principal {% endtrans %}</h1> 
+			{# <h1 class="center">{% trans %} {{metainfo.mainTitle}} {% endtrans %}</h1> #}
+
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<p>{% trans %}Texto introductorio{% endtrans %}</p>		
+	    </div>
+	</div>
+
+
+	<div class="row">
+		<div class="col-xs-12">
+			<p>{% trans %}Texto aviso de que no son definitivas{% endtrans %}</p>
+			<!-- FIXME: Las propuestas que se muestran a continuación están <b>pendientes de ser debatidas y aprobadas</b> en la asamblea. <b>En ningún caso suponen propuestas definitivas</b> para el programa de Guanyem Castelló. -->
+		</div>
+	</div>
+
+
+	{% if user and openProps%}
+	<div class="row">
+		<div class="col-xs-12">
+			<a class="btn btn-success btn-lg btn-block" href="nueva-propuesta.php">{% trans %}SUBIR UNA NUEVA PROPUESTA{% endtrans %}</a>
+		</div>
+	</div>	
+	{% endif %}
+
+{#
+		<h2>{% trans %}Se está debatiendo{% endtrans %}</h2>
+#}
+
+	{% if user %}
+	{% else %}
+	<div class="row">
+		<div class="col-xs-12">
+			<a href="login.php">{% trans %}Tienes que estar identificado para hacer una propuesta, votarla o comentarla.{% endtrans %}</a>
+		</div>
+	</div>
+	{% endif %}
+	
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}Hay un total de{% endtrans %} {{ propaleatorias|length }} {% trans %}propuestas{% endtrans %}.
+	  </div>
+	</div>
+
+
+    {# Muestra el menú para ordenar las propuestas por diferentes criterios #}
+	<div class="row">
+		<ul class="nav nav-tabs" role="tablist" id="tabsIndex">
+  			<li class="active"><a href="#aleatorias" role="tab" data-toggle="tab">{% trans %}Ordenadas Aleatoriamente{% endtrans %}</a></li>
+  			<li><a href="#valoradas" role="tab" data-toggle="tab">{% trans %}Más valoradas{% endtrans %}</a></li>
+  			<li><a href="#consensuadas" role="tab" data-toggle="tab">{% trans %}Más consenso{% endtrans %}</a></li>
+  			<li><a href="#debatidas" role="tab" data-toggle="tab">{% trans %}Más debatidas{% endtrans %}</a></li>
+  			<li><a href="#recientes" role="tab" data-toggle="tab">{% trans %}Más recientes{% endtrans %}</a></li>
+  
+		</ul>
+	</div>
+
+
+    {# Muestra el contenido de cada uno de los criterios del menú anterior #}
+	<div class="tab-content">
+
+    {# Aleatoriamente #}
+	<div class="tab-pane active" id="aleatorias">
+	{% if propaleatorias %}
+
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}A continuación se muestran{% endtrans %} {{ propaleatorias|length }} {% trans %}propuestas en orden aleatorio{% endtrans %}.
+	  </div>
+	</div>
+
+{#FIXME#} <br /> <br />
+	
+		{% for propuesta in propaleatorias %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ propuesta.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
+				</div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{propuesta.sector}}"><span class="sector"><strong>{{propuesta.sector}}</strong></span></a>
+				{% if propuesta.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{propuesta.barrio}}"><span class="barrio"><strong>{{ propuesta.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+
+    {# Más valoradas #}
+	<div class="tab-pane" id="valoradas">
+	{% if propuestasvaloradas %}
+
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}A continuación se muestran las{% endtrans %} {{ propuestasvaloradas|length }} {% trans %}propuestas más valoradas{% endtrans %}.
+	  </div>
+	</div>
+
+{#FIXME#} <br /> <br />
+	
+		{% for propuesta in propuestasvaloradas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ propuesta.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
+				</div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{propuesta.sector}}"><span class="sector"><strong>{{propuesta.sector}}</strong></span></a>
+				{% if propuesta.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{propuesta.barrio}}"><span class="barrio"><strong>{{ propuesta.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+	
+    {# Más debatidas #}
+	<div class="tab-pane" id="debatidas">
+	{% if debatidas %}
+
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}A continuación se muestran las{% endtrans %} {{ debatidas|length }} {% trans %}propuestas más debatidas{% endtrans %}.
+	  </div>
+	</div>
+
+{#FIXME#} <br /> <br />
+	
+		{% for debatida in debatidas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ debatida.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{debatida.id}}">{{ debatida.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ debatida.nombre}} {{ debatida.apellidos}}</strong> | <strong>{{ debatida.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (debatida.positivos / (debatida.negativos + debatida.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ debatida.negativos + debatida.positivos }} {% trans %}votos.{% endtrans %} </div>
+
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{debatida.sector}}"><span class="sector"><strong>{{debatida.sector}}</strong></span></a>
+				{% if debatida.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{debatida.barrio}}"><span class="barrio"><strong>{{ debatida.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+    {# Más recientes #}
+	<div class="tab-pane" id="recientes">
+	{% if recientes %}
+
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}A continuación se muestran las{% endtrans %} {{ recientes|length }} {% trans %}propuestas más recientes{% endtrans %}.
+	  </div>
+	</div>
+
+{#FIXME#} <br /> <br />
+	
+		{% for reciente in recientes %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ reciente.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{reciente.id}}">{{ reciente.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ reciente.nombre}} {{ reciente.apellidos}} </strong>| <strong>{{ reciente.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (reciente.positivos / (reciente.negativos + reciente.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ reciente.negativos + reciente.positivos }} {% trans %}votos.{% endtrans %} </div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{reciente.sector}}"><span class="sector"><strong>{{reciente.sector}}</strong></span></a>
+				{% if reciente.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{reciente.barrio}}"><span class="barrio"><strong>{{ reciente.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a>.</div> 
+	{% endif %}
+	</div>
+
+    {# Más consensuadas #}
+	<div class="tab-pane" id="consensuadas">
+	{% if consensuadas %}
+
+	<div class="row">	
+	  <div class="col-xs-12">
+	   {% trans %}A continuación se muestran las{% endtrans %} {{ consensuadas|length }} {% trans %}propuestas más consensuadas{% endtrans %}.
+	  </div>
+	</div>
+
+{#FIXME#} <br /> <br />
+	
+		{% for consenso in consensuadas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ consenso.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{consenso.id}}">{{ consenso.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ consenso.nombre}} {{ consenso.apellidos}} </strong>| <strong>{{ consenso.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (consenso.positivos / (consenso.negativos + consenso.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ consenso.negativos + consenso.positivos }} {% trans %}votos.{% endtrans %} </div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{consenso.sector}}"><span class="sector"><strong>{{consenso.sector}}</strong></span></a>
+				{% if consenso.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{consenso.barrio}}"><span class="barrio"><strong>{{ consenso.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a>.</div> 
+	{% endif %}
+	</div>
+	</div>
+
+	<script>
+	
+	$('#myTab a').click(function (e) {
+	  	e.preventDefault();
+	  	$(this).tab('show');
+	})
+	</script>
+	
+	
+
+    {# Muestra los distintos sectores (categorías) que hay #}
+	<a name="sectores"></a><h2>{% trans %}Sectores{% endtrans %}</h2>
+
+	<div class="row">
+	
+    {# FIXME si no existe {{sect.title[lang]}}, escribir el primer sect.title definido #}
+	{% for k,sect in sectors %}
+	
+
+		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+		        {# Hay que hacerlo así, en caso contrario da error: asignar el título a una variable y poner la variable en trans (con un espacio antes#}
+                <h4 class="titulo-sector"><a href="sector.php?sector={{ sect.key }}">{{sect.title[lang]}}</a> <a data-toggle="modal" href="#{{k}}" class="fa fa-info-circle"></a></h4>
+                <img id="{{ sect.key }}" alt="{{sect.title[lang]}}" class="img-responsive sector" src="{{sect.image}}">
+            </div>
+		    <div id="{{k}}" class="modal fade">
+		        <div class="modal-dialog">
+		            <div class="modal-content">
+		                <div class="modal-header">
+		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		                    <h4 class="modal-title">{{sect.title[lang]}}</h4>
+		                </div>
+		                <div class="modal-body">
+                <p>{% trans %}En este eje sectorial se debate acerca de:{% endtrans %}</p>
+		                    <ul>
+		                    	<li>{{sect.title[lang]}}</li>
+		                    	{% if sect.descriptions %}
+		                    	    {% for desc in sect.descriptions %}
+		                    	         <li>{{desc}}</li>
+		                    	    {% endfor %}
+		                    	{% endif %}
+		                    </ul>
+		                    <p class="text-danger"><small>{% trans %}Puedes contactar con {% endtrans %} {{entity.contactText}}.</small>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+    {% endfor %}
+
+
+
+
+  
+ 
+
+		      
+	</div>
+	
+	
+	{#
+	<a name="barrios"></a><h2>{% trans %}Barrios{% endtrans %}</h2>	
+
+	<div class="row visible-sm visible-md visible-lg">
+		<div class="col-md-12">
+			<svg class="img-responsive"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="700"
+   height="674"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="CastelloBarris.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="348.62996"
+     inkscape:cy="340"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="974"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-378.36217)">
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 133,308.5 37.5,-12.5 9,4 219.5,61 -18,33.5 -40,-14.5 -0.5,-3.5 c -24.93933,-5.51511 -53.60083,-13.51167 -90.5,-27 l -4,3.5 -8,-4.5 -6,0 -4,-1 -9.5,-1.5 -22.5,-8 -2,4.5 -22,-5.5 4,-11.5 z"
+       id="Distrito1"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       sodipodi:nodetypes="cccccccccccccccccc"
+       inkscape:label="#path3050" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 169.5,673.36217 4.5,-3.5 0.5,-5.5 5,-2 13,-3 15,-5.5 3.5,-2 3.5,0.5 10.5,-6.5 13,-11.5 5,-6.5 46,28 51,24.5 29.5,12 13,3.5 23,5.5 10,2 -8,19 -10,16.5 -208.5,-58.5 -11.5,-3.5 z"
+       id="Distrito2"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3052" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 376.5,403.5 5.5,-6.5 -1,-4 31,-57.5 3,-10.5 7,0.5 0.5,-9 37.5,7.5 44.5,8 13,2 6,0 33.5,3 -15,63 -7.5,25 -21.5,54 -25,-12 4,-12 -85,-33.5 -21.5,-12 z"
+       id="Distrito3"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       inkscape:label="#path3054" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 214.5,571 113,-116.5 14.5,-16 16,-22.5 2.5,-1 7.5,-8 5,-4 5.5,2.5 29.5,17 35,13 49,19.5 -4.5,11.5 26.5,12.5 -26.5,64 -12.5,10 -151.5,88 -16,5.5 -13.5,1.5 -16.5,-1 -33,-9 -26.5,-10.5 8,-17.5 1,-13 -13.5,-10 z"
+       id="path3056"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 10.5,336 45.5,11 2.5,-2.5 -2,-9.5 9,5 13.5,-8 21.5,-9.5 23,-10 10,-4 42.5,16.5 -5,12 23,5 2,-4.5 21.5,7.5 9,2 6,1.5 5,0 8.5,4.5 4,-4 21,7.5 24,7.5 23.5,7 22,4.5 0,4 41.5,15 0.5,3 -6,6 -3.5,-1 -13,12 -2.5,1 -16.5,22.5 -91,-35 -5.5,-0.5 -23,-8 -54.5,83.5 -97,-53 -2.5,0.5 -12,12 -33,53 -10,-5 -1.5,0 z"
+       id="Distrito5"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       inkscape:label="#path3058" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 11.5,662.5 11,485 l 12,6 31,-52 14.5,-14 98,52.5 55,-83 26,9.5 2,-1.5 92.5,36 -127.5,132.5 0,17.5 12.5,8 -1,13.5 -6,17.5 c -6.33333,10.21351 -12.66667,19.66575 -19,35 z"
+       id="Distrito6"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkscape:label="#path3079" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 200,662.5 19.5,-34.5 29.5,11.5 22.5,6 18,2 18.5,-1.5 15.5,-4.5 27.5,-17 47,-26.5 45,-26 30.5,-17.5 12.5,-11.5 28,-64 -1,-2.5 21,-49.5 9.5,-32.5 13.5,-57.5 -41.5,-3.5 -93.5,-17 0,9 -7.5,0 -40.5,-10 -9.5,-3.5 -24.5,-9.5 15,-27.5 6,-13.5 7,-20.5 6.5,-22 2,-7 L 375,191.5 303.5,84 296,70.5 293,59 l -3,-12 -1,-3.5 -9.5,-22 306,1 0.5,388.5 1,253 z"
+       id="Distrito7"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       inkscape:label="#path3081" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 10,336 44.5,11 4.5,-3 -3.5,-10 10.5,6.5 12.5,-9.5 27.5,-10 28,-12.5 36.5,-12 4,-4 0.5,-5.5 4,-2.5 15,-3 19,-7.5 4,-0.5 8.5,-5 12,-10 6,-8.5 23.5,14.5 26.5,16.5 25,11 21,10.5 14,-24 7,-16.5 12.5,-37 3,-12 -1,-21 -42,-63 -35.5,-55 -2.5,-7.5 -5,-21 -11,-24 L 10,22 z"
+       id="Distrito8"
+       inkscape:connector-curvature="0"
+       inkscape:label="#path3083"
+       transform="translate(0,378.36217)" />
+    <path class="barrio" cursor="pointer"
+       style="fill:#6ecfbe;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 589.5,255 0.5,-234 94.5,0.5 2,233.5 z"
+       id="Distrito9"
+       inkscape:connector-curvature="0"
+       transform="translate(0,378.36217)"
+       inkscape:label="#path3085" />
+    <text 
+       xml:space="preserve"
+       style="font-size:22.44252777px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="407.2785"
+       y="576.68854"
+       id="distrito1_label"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3106"
+       transform="matrix(0.89302696,0.2837454,-0.3196582,1.0182206,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3108"
+         x="407.2785"
+         y="576.68854">Distrito 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:28.48532486px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="433.43875"
+       y="610.34033"
+       id="distrito2_label"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.9951604,0.27293712,-0.30598038,0.9209436,0,0)"
+       inkscape:label="#text3110"><tspan
+         sodipodi:role="line"
+         id="tspan3112"
+         x="433.43875"
+         y="610.34033">Distrito 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:30.66554451px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="450.80179"
+       y="695.29279"
+       id="distrito3_label"
+       sodipodi:linespacing="125%"
+       transform="scale(0.91431316,1.0937172)"
+       inkscape:label="#text3114"><tspan
+         sodipodi:role="line"
+         id="tspan3116"
+         x="450.80179"
+         y="695.29279">Distrito 3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:35.47895432px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="269.64905"
+       y="965.21912"
+       id="distrito4_label"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0578281,0.94533315)"
+       inkscape:label="#text3118"><tspan
+         sodipodi:role="line"
+         id="tspan3120"
+         x="269.64905"
+         y="965.21912">Distrito 4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:34.24581909px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="57.589687"
+       y="750.59747"
+       id="distrito5_label"
+       sodipodi:linespacing="125%"
+       transform="scale(0.98318401,1.0171036)"
+       inkscape:label="#text3122"><tspan
+         sodipodi:role="line"
+         id="tspan3124"
+         x="57.589687"
+         y="750.59747">Distrito 5</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:36.3747139px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="24.163061"
+       y="959.03619"
+       id="distrito6_label"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0069498,0.99309815)"
+       inkscape:label="#text3126"><tspan
+         sodipodi:role="line"
+         id="tspan3128"
+         x="24.163061"
+         y="959.03619">Distrito 6</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="392"
+       y="622.36218"
+       id="distrito7_label"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3130"><tspan
+         sodipodi:role="line"
+         id="tspan3132"
+         x="392"
+         y="622.36218">Distrito 7</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="87"
+       y="555.36218"
+       id="distrito8_label"
+       sodipodi:linespacing="125%"
+       inkscape:label="#text3134"><tspan
+         sodipodi:role="line"
+         id="tspan3136"
+         x="87"
+         y="555.36218">Distrito 8</tspan><tspan
+         sodipodi:role="line"
+         x="87"
+         y="605.36218"
+         id="tspan3138" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:33.5902977px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="649.57361"
+       y="-344.32504"
+       id="distrito9_label"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.4349528,0.8928575,-0.9159119,0.41894475,0,0)"
+       inkscape:label="#text3140"><tspan
+         sodipodi:role="line"
+         id="tspan3142"
+         x="649.57361"
+         y="-344.32504">Distrito 9</tspan></text>
+  </g>
+</svg>
+#}
+{% endblock %}

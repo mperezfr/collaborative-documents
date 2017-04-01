@@ -1,0 +1,196 @@
+{% extends "base2.html" %}
+
+{% block title %} {% trans %}Entrar{% endtrans %} {% endblock %}
+{% block scripts %}
+
+{# MPF: This page show the login form. There are two other form hidden
+
+            <div id="login"></div>
+
+            <div id="signup"></div>
+            
+            <div id="forgot"></div>
+            
+
+            
+            They can be shown or hide in javascript:
+
+            $('#signup').hide();
+            $('#forgot').hide();
+            $('#login').show();
+#}
+
+
+<script>
+$(document).ready(function() {
+
+    $("#login_form").validate({
+        rules: {
+          email_login: {
+            required: true,
+            email: true,
+          },
+          pass_login: {
+            required: true,
+          },
+        messages:{
+          email_login: {
+            required: "{% trans %}Tienes que escribir un email{% endtrans %}",
+          }, 
+          pass_login: {
+            required: "{% trans %}Escribe la contraseña{% endtrans %}",
+          }
+        },  
+        }
+    });
+    $("#signup_form").validate({
+        rules: {
+          email_signup: {
+            email:true,
+            required:true,
+            remote: "lib/validar_email_db.php",
+          },
+          pass_signup: "{% trans %}required{% endtrans %}",
+          nombre: "{% trans %}required{% endtrans %}",
+          apellidos: "{% trans %}required{% endtrans %}",
+        },
+        messages:{
+          email_signup: {
+            remote: "{% trans %}Este email ya está registrado{% endtrans %}",
+          },
+          nombre: {
+            required: "{% trans %}Escribe tu nombre{% endtrans %}",
+          },
+          apellidos: {
+            required: "{% trans %}Escribe tus apellidos{% endtrans %}",
+          }, 
+          pass_signup: {
+            required: "{% trans %}Escribe una contraseña{% endtrans %}",
+          }
+        },
+    });
+});
+</script>
+{% endblock %}
+
+{% block content %}    
+    <div class="form-wrap">
+        <div class="row">
+            <div id="login">
+                <div class="form-header">
+                    <i class="fa fa-user"></i>
+                    <h2>Entrar</h2>
+                    {% if error %}
+                    <p class="no_login">{% trans %}Usuario o contraseña incorrecta. Inténtalo otra vez.{% endtrans %}</p>
+                    {% endif%}
+                </div>
+                <form id="login_form"  method="post" action="entrar.php">
+                <div class="form-main">
+                    <div class="form-group">
+                        <input type="text" name="email_login" id="email_login" class="form-control" placeholder="{% trans %}Email{% endtrans %}">
+                        <input type="password" name="pass_login" id="pass_login" class="form-control" placeholder="{% trans %}Contraseña{% endtrans %}">
+                    </div>
+                    <button id="button_login" type="submit" class="btn btn-block signin">{% trans %}Entrar{% endtrans %}</button>
+                </form>
+                </div>
+                <div class="form-footer">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <i class="fa fa-unlock-alt"></i>
+                            {# <a href="https://primaries.castelloenmoviment.org/?do=in">{% trans %}Recordar la contraseña{% endtrans %}</a>
+                            #}
+                            <a href="" id="forgot_from_1">{% trans %}Recordar la contraseña{% endtrans %}</a>
+                        </div>
+                        <div class="col-xs-4">
+                            <i class="fa fa-check"></i>
+                            {# <a href="https://primaries.castelloenmoviment.org/?do=in">{% trans %}Regístrate en el censo{% endtrans %}</a>
+                            #}
+                            {# Si se deja href en blanco con javascript se muestra el formulario id="signup"
+                            <a href="" id="signup_from_1">{% trans %}Regístrate{% endtrans %}</a> #}
+                            <a href="account">{% trans %}Regístrate{% endtrans %}</a>
+                        </div>
+                        {#
+                        <div class="col-xs-4">
+                            <i class="fa fa-check"></i>
+                            <a href="https://castelloenmoviment.org/wp-login.php?action=register" id="signup_from_1">{% trans %}Regístrate en la web{% endtrans %}</a>
+                        </div>#}
+                    </div>
+                </div>      
+            </div>
+
+            {# Form to registrate a new account #}
+            <div  id="signup">
+                <div class="form-header">
+                    <i class="fa fa-user"></i>
+                    <h2>Alta</h2>
+                </div>
+                <form id="signup_form" method="post" action="alta.php">
+                <div class="form-main">
+                    <div class="form-group">
+                        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="{% trans %}Nombre{% endtrans %}">
+                        <input type="text" name="apellidos" id="apellidos" class="form-control" placeholder="{% trans %}Apellidos{% endtrans %}">
+                        <input type="text" name="email_signup" id="email_signup" class="form-control" placeholder="{% trans %}Email{% endtrans %}">
+                        <input type="password" name="pass_signup" id="pass_signup" class="form-control" placeholder="{% trans %}Contraseña{% endtrans %}">
+                    </div>
+                    <button id="button_signup" type="submit" class="btn btn-block signin">{% trans %}Registrarse{% endtrans %}</button>
+                </form>
+                </div>
+                <div class="form-footer">
+                
+                {% trans %}Aviso legal{% endtrans %}
+                {#
+                    <p>De conformidad con lo dispuesto en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, te informamos de que los datos personales que nos proporciones así como aquellos que nos facilites en un futuro serán incorporados a un fichero automatizado de datos de carácter personal responsabilidad de Guanyem Castelló, con la finalidad de gestionar las comunicaciones que podamos realizar contigo.
+
+                    <p>Para ejercitar los derechos de acceso, rectificación, oposición y cancelación reconocidos por la legislación vigente, el interesado deberá realizar una comunicación a info@castelloenmoviment.org, indicando como asunto “Protección de datos”.
+
+                    <p>Asumimos que al registrarte estás conforme con estas advertencias legales.#}
+                </div>      
+            </div>
+
+            <div id="forgot">
+                <div class="form-header">
+                    <i class="fa fa-user"></i>
+                    <h2>Recuperar contraseña</h2>
+                </div>
+                <div class="form-main">
+                <form id="form_forgot" method="post" action="forgot.php">
+                    <div class="form-group">
+                        <input type="text" name="email_forgot"id="email_forgot" class="form-control" placeholder="{% trans %}Email{% endtrans %}">
+                    </div>
+                    <button id="button_forgot" type="submit" class="btn btn-block signin">{% trans %}Recuperar contraseña{% endtrans %}</button>
+                </form>
+                </div>  
+            </div>
+            
+            
+
+
+        </div>
+    </div> 
+
+    <script>
+
+        $('#signup').hide();
+        $('#forgot').hide();
+        $('#login_from_1').click(function (e) {
+            e.preventDefault();
+            $('#signup').hide();
+            $('#forgot').hide();
+            $('#login').show();
+        });
+        $('#signup_from_1').click(function (e) {
+            e.preventDefault();
+            $('#login').hide();
+            $('#forgot').hide();
+            $('#signup').show();
+            
+        });
+        $('#forgot_from_1').click(function (e) {
+            e.preventDefault();
+            $('#signup').hide();
+            $('#login').hide();
+            $('#forgot').show();
+        })
+
+    </script>                         
+{% endblock %}

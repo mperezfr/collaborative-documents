@@ -1,0 +1,222 @@
+{% extends "base2.html" %}
+
+{% block title %}
+	{% if tag %}
+		{% trans %}Propuestas de {% endtrans %}{{tag}} 
+	{%else%}
+		{% trans %}Propuestas de programa{% endtrans %}
+	{% endif %}
+	{% endblock %} 
+{% block scripts %}
+<script>
+$(document).ready(function() {
+	$(".sector").each(function() {
+		var sector = $(this).text();
+		sector = sector.replace(/-/g, ' ');
+		$(this).html('<strong>'+sector+'</strong>');
+	});
+
+	$(".barrio").each(function() {
+		var barrio = $(this).text();
+		if (barrio=="montanana"){
+			barrio=barrio.replace("montanana","montañana");
+		}else{
+			barrio = barrio.replace(/-/g, ' ');
+		}
+		$(this).html('<strong>'+barrio+'</strong>');
+	});
+});
+
+</script>
+{% endblock %}
+{% block content %}
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>{% trans %}Propuestas de programa{% endtrans %}: {{tag}}</h2>
+		</div>
+	</div>
+	{% if user %}
+	{% if openProps %}
+	<div class="row">
+		<div class="col-xs-12">
+			<a class="btn btn-success btn-lg btn-block" href="nueva-propuesta.php">{% trans %}SUBIR UNA NUEVA PROPUESTA{% endtrans %}</a>
+		</div>
+	</div>
+	{% endif %}	
+	{% else %}
+	<div class="row">
+		<div class="col-xs-12">
+			<a href="login.php">{% trans %}Tienes que estar identificado para hacer una propuesta, votarla o comentarla.{% endtrans %}</a>
+		</div>
+	</div>
+	{% endif %}
+
+ 	<div class="row">	
+      <div class="col-xs-12">{% trans %}Hay un total de{% endtrans %} {{ propaleatorias|length }} {% trans %}propuestas{% endtrans %}.</div>
+    </div>
+
+	<div class="row">
+		<ul class="nav nav-tabs" role="tablist" id="tabsIndex">
+  			<li class="active"><a href="#aleatorias" role="tab" data-toggle="tab">{% trans %}Ordenadas Aleatoriamente{% endtrans %}</a></li>
+{#  			<li><a href="#valoradas" role="tab" data-toggle="tab">{% trans %}Más valoradas{% endtrans %}</a></li> #}
+  			<li><a href="#consensuadas" role="tab" data-toggle="tab">{% trans %}Más consenso{% endtrans %}</a></li>
+  			<li><a href="#debatidas" role="tab" data-toggle="tab">{% trans %}Más debatidas{% endtrans %}</a></li>
+{#  			<li><a href="#recientes" role="tab" data-toggle="tab">{% trans %}Más recientes{% endtrans %}</a></li>#}
+  
+		</ul>
+	</div>
+	<div class="tab-content">
+
+
+	<div class="tab-pane active" id="aleatorias">
+	{% if propaleatorias %}
+	
+		{% for propuesta in propaleatorias %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ propuesta.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
+				</div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{propuesta.sector}}"><span class="sector"><strong>{{propuesta.sector}}</strong></span></a>
+				{% if propuesta.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{propuesta.barrio}}"><span class="barrio"><strong>{{ propuesta.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+
+
+
+
+
+	<div class="tab-pane" id="valoradas">
+	{% if propuestas %}
+		{% for propuesta in propuestas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ propuesta.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
+				</div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{propuesta.sector}}"><span class="sector"><strong>{{propuesta.sector}}</strong></span></a>
+				{% if propuesta.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{propuesta.barrio}}"><span class="barrio"><strong>{{ propuesta.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+	<div class="tab-pane" id="debatidas">
+	{% if debatidas %}
+		{% for debatida in debatidas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ debatida.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{debatida.id}}">{{ debatida.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ debatida.nombre}} {{ debatida.apellidos}}</strong> | <strong>{{ debatida.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (debatida.positivos / (debatida.negativos + debatida.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ debatida.negativos + debatida.positivos }} {% trans %}votos.{% endtrans %} </div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{debatida.sector}}"><span class="sector"><strong>{{debatida.sector}}</strong></span></a>
+				{% if debatida.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{debatida.barrio}}"><span class="barrio"><strong>{{ debatida.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+	<div class="tab-pane" id="recientes">
+	{% if recientes %}
+		{% for reciente in recientes %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ reciente.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{reciente.id}}">{{ reciente.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ reciente.nombre}} {{ reciente.apellidos}} </strong>| <strong>{{ reciente.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (reciente.positivos / (reciente.negativos + reciente.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ reciente.negativos + reciente.positivos }} {% trans %}votos.{% endtrans %} </div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{reciente.sector}}"><span class="sector"><strong>{{reciente.sector}}</strong></span></a>
+				{% if reciente.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{reciente.barrio}}"><span class="barrio"><strong>{{ reciente.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+	<div class="tab-pane" id="consensuadas">
+	{% if consensuadas %}
+		{% for consenso in consensuadas %}
+
+		<div class="row listado">
+			<div class="col-xs-1 votos">
+				{{ consenso.sum_likes}}
+			</div>
+			<div class="col-xs-11">
+				<div class="titulo"><a href="propuesta.php?id={{consenso.id}}">{{ consenso.titulo}}</a></div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ consenso.nombre}} {{ consenso.apellidos}} </strong>| <strong>{{ consenso.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (consenso.positivos / (consenso.negativos + consenso.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ consenso.negativos + consenso.positivos }} {% trans %}votos.{% endtrans %} </div>
+				<div class="metadata">
+				sector: <a href="sector.php?sector={{consenso.sector}}"><span class="sector"><strong>{{consenso.sector}}</strong></span></a>
+				{% if consenso.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{consenso.barrio}}"><span class="barrio"><strong>{{ consenso.barrio }}</strong></span>
+				{% endif %}
+				</div>
+			</div>
+		</div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+	</div>
+
+	<script>
+	
+	$('#myTab a').click(function (e) {
+	  	e.preventDefault();
+	  	$(this).tab('show');
+	})
+	</script>
+{% endblock%}

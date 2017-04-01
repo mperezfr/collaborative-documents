@@ -1,0 +1,125 @@
+{% extends "base2.html" %}
+
+{% block title %} {% trans %}Nueva propuesta{% endtrans %} {% endblock %}
+{% block scripts %}
+
+{#nicEdit no está disponible por https (27/2/2015, así que lo he descargado y lo cargo en local#}
+{#<script src="https://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> #}
+<script src="static/js/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({buttonList : ['bold','italic','underline','left','center','right','justify','ol','ul','link',]}).panelInstance('propuesta');
+});
+</script>
+<script>
+$(document).ready(function() {
+
+	$("#nuevapropuesta").validate({
+	    rules: {
+	      titulo: {
+			required: true,
+	      },
+	      sector: {
+	      	required: true,
+	      }
+	    },
+	    messages:{
+	      titulo: {
+			required: "{% trans %}Tiene que poner un título{% endtrans %}",
+	      },
+	      sector: {
+	      	required: "{% trans %}Tiene que elegir un sector{% endtrans %}",
+	    }
+	}
+	});
+});
+</script>
+{% endblock %}
+{% block content %}
+
+	{% if user and openProps%}
+<form class="form-horizontal" role="form" id="nuevapropuesta" action="nueva.php" method="post" enctype="multipart/form-data">
+
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="titulo">{% trans %}Título{% endtrans %} *</label>
+		    <input type="text" name ="titulo" class="form-control" id="titulo"
+		           placeholder="{% trans %}Título de la propuesta{% endtrans %}">
+		  </div>
+		</div>
+		
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="propuesta">{% trans %}Escribe la propuesta{% endtrans %} *</label>
+		    <textarea class="form-control" name="propuesta" id="propuesta" rows="10"></textarea> 
+		  </div>
+		</div>
+
+        {# Sectores que pueden haber #}
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="sector">{% trans %}Selecciona un sector{% endtrans %} *</label>
+		    <div style="clear:both"></div>
+
+
+	{% for k,sect in sectors %}
+		    {% set name = sect.title %}
+  			<label class="radio-inline col-xs-3">
+			    <input type="radio" name="sector" id="{{sect.key}}" value="{{sect.key}}" >
+			    {{sect.title[lang]}}</label>
+    {% endfor %}
+    
+			    
+			<div style="clear:both"></div>
+		  	
+		</div>
+
+		</div>
+
+{#
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="desarrollo">{% trans %}Selecciona un barrio{% endtrans %} ({% trans %}opcional{% endtrans %})</label>
+
+		    <select class="form-control" name="barrio">
+			  <option value="">{% trans %}Selecciona un barrio{% endtrans %}</option>
+			  <option value="distrito1">{% trans %}distrito 1{% endtrans %}</option>
+			  <option value="distrito2">{% trans %}distrito 2{% endtrans %}</option>
+			  <option value="distrito3">{% trans %}distrito 3{% endtrans %}</option>
+			  <option value="distrito4">{% trans %}distrito 4{% endtrans %}</option>
+			  <option value="distrito5">{% trans %}distrito 5{% endtrans %}</option>
+			  <option value="distrito6">{% trans %}distrito 6{% endtrans %}</option>
+			  <option value="distrito7">{% trans %}distrito 7{% endtrans %}</option>
+			  <option value="distrito8">{% trans %}distrito 8{% endtrans %}</option>
+			  <option value="grao">{% trans %}Grao{% endtrans %}</option>
+			</select>
+		    
+		  </div>
+		</div>
+		#}
+
+{#		
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="desarrollo">{% trans %}Barrio{% endtrans %} ({% trans %}opcional{% endtrans %}) *</label>
+		    <input type="text" name ="barrio" class="form-control" id="barrio"
+		           placeholder="{% trans %}Barrio{% endtrans %}">
+		  </div>
+		</div>
+#}
+		
+		<div class="col-xs-10 col-md-offset-1">
+		  <button type="submit" id="enviar" class="btn-lg btn-block btn btn-success">{% trans %}Enviar{% endtrans %}</button>
+		</div>
+
+</form>
+	{% else %}
+   <div class="row">
+		<div class="col-xs-12">
+			<h2 class="center">{% trans %}En estos momentos no se pueden hacer nuevas propuestas{% endtrans %}.</h2>
+
+		</div>
+	</div>
+	{% endif %}
+
+{% endblock %}

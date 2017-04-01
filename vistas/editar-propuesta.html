@@ -1,0 +1,126 @@
+{% extends "base2.html" %}
+
+{% block title %} {% trans %}Editar propuesta{% endtrans %} {% endblock %}
+{% block scripts %}
+
+
+{#nicEdit no está disponible por https (27/2/2015, así que lo he descargado y lo cargo en local#}
+{#<script src="https://js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script> #}
+<script src="static/js/nicEdit-latest.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({buttonList : ['bold','italic','underline','left','center','right','justify','ol','ul','link']}).panelInstance('propuesta');
+});
+</script>
+<script>
+$(document).ready(function() {
+
+	$("#nueva-propuesta").validate({
+	    rules: {
+	      titulo: {
+			required: true,
+	      },
+	      sector: {
+	      	required: true,
+	      }
+	    },
+	    messages:{
+	      titulo: {
+			required: "{% trans %}Tiene que poner un título{% endtrans %}",
+	      },
+	      sector: {
+	      	required: "{% trans %}Tiene que elegir un sector{% endtrans %}",
+	    }
+	}
+	});
+	$('#{{propuesta.sector}}').prop("checked", "checked");
+	$('#{{propuesta.barrio}}').attr("selected", "selected");
+
+});
+</script>
+{% endblock %}
+{% block content %}
+<form class="form-horizontal" role="form" id="nueva-propuesta" action="editando.php" method="post" enctype="multipart/form-data">
+
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="título">Título *</label>
+		    <input type="text" name ="titulo" class="form-control" id="titulo"
+		           placeholder="{% trans %}Título de la propuesta{% endtrans %}" value="{{propuesta.titulo}}">
+		  </div>
+		</div>
+		
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="propuesta">{% trans %}Escribe la propuesta{% endtrans %} *</label>
+		    <textarea class="form-control" name="propuesta" id="propuesta" rows="10">{{propuesta.propuesta}}</textarea> 
+		  </div>
+		</div>
+
+
+        {# Sectores que pueden haber #}
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="sector">{% trans %}Selecciona un sector{% endtrans %} *</label>
+		    <div style="clear:both"></div>
+
+
+	{% for k,sect in sectors %}
+		    {% set name = sect.title %}
+  			<label class="radio-inline col-xs-3">
+			    <input type="radio" name="sector" id="{{sect.key}}" value="{{sect.key}}" >
+			    {{sect.title[lang]}}</label>
+    {% endfor %}
+    
+			    
+			<div style="clear:both"></div>
+		  	
+		</div>
+
+		</div>
+
+
+{#
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="desarrollo">{% trans %}Selecciona un barrio{% endtrans %} ({% trans %}opcional{% endtrans %})</label>
+
+		    <select class="form-control" name="barrio">
+			  <option value="">{% trans %}Selecciona un barrio{% endtrans %}</option>
+			  <option value="distrito1">{% trans %}distrito 1{% endtrans %}</option>
+			  <option value="distrito2">{% trans %}distrito 2{% endtrans %}</option>
+			  <option value="distrito3">{% trans %}distrito 3{% endtrans %}</option>
+			  <option value="distrito4">{% trans %}distrito 4{% endtrans %}</option>
+			  <option value="distrito5">{% trans %}distrito 5{% endtrans %}</option>
+			  <option value="distrito6">{% trans %}distrito 6{% endtrans %}</option>
+			  <option value="distrito7">{% trans %}distrito 7{% endtrans %}</option>
+			  <option value="distrito8">{% trans %}distrito 8{% endtrans %}</option>
+			  <option value="grao">{% trans %}Grao{% endtrans %}</option>
+			</select>
+		    
+		  </div>
+		</div>
+		#}
+{#		
+		<div class="col-xs-10 col-md-offset-1">
+		  <div class="form-group">
+		    <label for="desarrollo">{% trans %}Barrio{% endtrans %} ({% trans %}opcional{% endtrans %}) *</label>
+		    <input type="text" name ="barrio" class="form-control" id="barrio"
+		           placeholder="{% trans %}Barrio{% endtrans %}" value="{{propuesta.barrio}}">
+		  </div>
+		</div>
+#}
+
+
+		<input type="hidden" name="id" value="{{propuesta.id}}">
+		<div class="col-xs-10 col-md-offset-1">
+		  <button type="submit" id="enviar" class="btn-lg btn-block btn btn-success">{% trans %}Enviar{% endtrans %}</button>
+		</div>
+
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,4 @@
+ErrorDocument 404 /collaborative-documents/404.php
+
+RedirectMatch 404 TODO.txt 
+RedirectMatch 404 ^(.*/)?\.git+
