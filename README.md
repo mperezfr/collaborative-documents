@@ -1,4 +1,4 @@
-presupestos-participativos
+collaborative-documents
 ==========================
 
 Herramienta para la elaboración de un programa colaborativo basado en propuestas y votación de la gente
