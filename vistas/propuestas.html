@@ -74,10 +74,10 @@ $(document).ready(function() {
 		{% for propuesta in propaleatorias %}
 
 		<div class="row listado">
-			<div class="col-xs-1 votos">
+			<div class="col-xs-3 col-sm-2 col-md-1 votos">
 				{{ propuesta.sum_likes}}
 			</div>
-			<div class="col-xs-11">
+			<div class="col-xs-9 col-sm-10 col-md-11">
 				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
 				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
 				</div>
@@ -107,10 +107,10 @@ $(document).ready(function() {
 		{% for propuesta in propuestas %}
 
 		<div class="row listado">
-			<div class="col-xs-1 votos">
+			<div class="col-xs-3 col-sm-2 col-md-1 votos">
 				{{ propuesta.sum_likes}}
 			</div>
-			<div class="col-xs-11">
+			<div class="col-xs-9 col-sm-10 col-md-11">
 				<div class="titulo"><a href="propuesta.php?id={{propuesta.id}}">{{ propuesta.titulo}}</a></div>
 				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
 				</div>
@@ -135,10 +135,10 @@ $(document).ready(function() {
 		{% for debatida in debatidas %}
 
 		<div class="row listado">
-			<div class="col-xs-1 votos">
+			<div class="col-xs-3 col-sm-2 col-md-1 votos">
 				{{ debatida.sum_likes}}
 			</div>
-			<div class="col-xs-11">
+			<div class="col-xs-9 col-sm-10 col-md-11">
 				<div class="titulo"><a href="propuesta.php?id={{debatida.id}}">{{ debatida.titulo}}</a></div>
 				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ debatida.nombre}} {{ debatida.apellidos}}</strong> | <strong>{{ debatida.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (debatida.positivos / (debatida.negativos + debatida.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ debatida.negativos + debatida.positivos }} {% trans %}votos.{% endtrans %} </div>
 				<div class="metadata">
@@ -162,10 +162,10 @@ $(document).ready(function() {
 		{% for reciente in recientes %}
 
 		<div class="row listado">
-			<div class="col-xs-1 votos">
+			<div class="col-xs-3 col-sm-2 col-md-1 votos">
 				{{ reciente.sum_likes}}
 			</div>
-			<div class="col-xs-11">
+			<div class="col-xs-9 col-sm-10 col-md-11">
 				<div class="titulo"><a href="propuesta.php?id={{reciente.id}}">{{ reciente.titulo}}</a></div>
 				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ reciente.nombre}} {{ reciente.apellidos}} </strong>| <strong>{{ reciente.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (reciente.positivos / (reciente.negativos + reciente.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ reciente.negativos + reciente.positivos }} {% trans %}votos.{% endtrans %} </div>
 				<div class="metadata">
@@ -189,10 +189,10 @@ $(document).ready(function() {
 		{% for consenso in consensuadas %}
 
 		<div class="row listado">
-			<div class="col-xs-1 votos">
+			<div class="col-xs-3 col-sm-2 col-md-1 votos">
 				{{ consenso.sum_likes}}
 			</div>
-			<div class="col-xs-11">
+			<div class="col-xs-9 col-sm-10 col-md-11">
 				<div class="titulo"><a href="propuesta.php?id={{consenso.id}}">{{ consenso.titulo}}</a></div>
 				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ consenso.nombre}} {{ consenso.apellidos}} </strong>| <strong>{{ consenso.comentarios}}</strong> {% trans %}comentarios{% endtrans %} | {% set suma = (consenso.positivos / (consenso.negativos + consenso.positivos))*100 %} <strong>{{ suma | number_format(2) }} % </strong>{% trans %}de votos positivos de un total de{% endtrans %} {{ consenso.negativos + consenso.positivos }} {% trans %}votos.{% endtrans %} </div>
 				<div class="metadata">
