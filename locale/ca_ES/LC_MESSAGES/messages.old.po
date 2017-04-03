@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-31 23:22+0200\n"
+"POT-Creation-Date: 2017-04-03 03:57+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,92 +17,67 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:32
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:96
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:31
-msgid "Texto del título principal"
-msgstr "Com vols PODEM?"
-
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:107
-msgid "Texto introductorio"
-msgstr ""
-"<p><b>Aprofundir el Canvi</b> vol ser un procés participatiu, transparent, "
-"democràtic i eficient per convidar a tota la militància de Podem a "
-"desenvolupar les millors propostes per actualitzar la nostra organització i "
-"aprofundir el canvi. Dins d'aquest procés, aquesta eina (<a href='https://"
-"aprofundirelcanvi.info/comvolspodem'>https://aprofundirelcanvi.info/"
-"comvolspodem</a>) forma part de la Fase 2, mitjançant la qual podràs enviar "
-"fins al 9 d'abril les teues propostes per als documents que presentarem per "
-"la 2a Assemblea Ciutadana Valenciana de Podem. Si la teua proposta rep més "
-"del 50% de vots positius, els Grups de Redacció hauran de discutir la teua "
-"proposta; si reps més del 66% de vots positius, la teua idea serà "
-"incorporada de forma automàtica. I tu, com vols Podem?</p>"
-
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:117
-msgid "Texto aviso de que no son definitivas"
-msgstr " "
-
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:132
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:128
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:104
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:353
 msgid "SUBIR UNA NUEVA PROPUESTA"
 msgstr "PUJAR UNA NOVA PROPOSTA"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:154
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:150
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:119
 msgid ""
 "Tienes que estar identificado para hacer una propuesta, votarla o comentarla."
 msgstr ""
 "Has d'estar identificat per a poder fer una proposta, votar-la o valorar-la."
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:166
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:162
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:130
 msgid "Hay un total de"
 msgstr "Hi ha un total de"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:170
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:166
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:134
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:96
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:230
 msgid "propuestas"
 msgstr "propostes"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:182
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:178
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:142
 msgid "Ordenadas Aleatoriamente"
 msgstr "Ordenades Aleatoriament"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:186
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:182
 msgid "Más valoradas"
 msgstr "Més valorades"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:190
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:186
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:147
 msgid "Más consenso"
 msgstr "Més consens"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:194
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:190
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:151
 msgid "Más debatidas"
 msgstr "Més debatudes"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:198
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:194
 msgid "Más recientes"
 msgstr "Més recents"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:221
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:217
 msgid "A continuación se muestran"
 msgstr "A continuació es mostren"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:225
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:221
 msgid "propuestas en orden aleatorio"
 msgstr "Propostes en ordre aleatori"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:257
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:372
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:486
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:600
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:713
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:253
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:368
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:482
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:596
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:709
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:190
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:288
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:381
@@ -113,11 +88,11 @@ msgstr "Propostes en ordre aleatori"
 msgid "autor:"
 msgstr "autor:"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:265
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:380
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:494
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:608
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:721
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:261
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:376
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:490
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:604
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:717
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:198
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:296
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:389
@@ -128,11 +103,11 @@ msgstr "autor:"
 msgid "comentarios"
 msgstr "comentaris"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:271
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:386
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:500
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:614
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:727
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:267
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:382
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:496
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:610
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:723
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:204
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:302
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:395
@@ -143,11 +118,11 @@ msgstr "comentaris"
 msgid "de votos positivos de un total de"
 msgstr "de vots positius d'un total de"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:275
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:390
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:504
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:618
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:731
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:271
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:386
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:500
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:614
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:727
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:208
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:306
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:399
@@ -158,11 +133,11 @@ msgstr "de vots positius d'un total de"
 msgid "votos."
 msgstr "vots."
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:290
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:405
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:519
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:632
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:745
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:286
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:401
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:515
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:628
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:741
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:223
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:321
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:413
@@ -173,11 +148,11 @@ msgstr "vots."
 msgid "Barrio:"
 msgstr "Barri:"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:314
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:429
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:543
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:656
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:769
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:310
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:425
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:539
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:652
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:765
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:247
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:345
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:437
@@ -186,11 +161,11 @@ msgstr "Barri:"
 msgid "No hay propuestas todavía."
 msgstr "No hi han encara propostes."
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:316
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:431
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:545
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:658
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:771
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:312
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:427
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:541
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:654
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:767
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:249
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:347
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:439
@@ -201,38 +176,38 @@ msgstr "No hi han encara propostes."
 msgid "Envíanos la tuya"
 msgstr "Envia'ns la teua"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:336
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:450
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:564
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:677
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:332
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:446
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:560
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:673
 msgid "A continuación se muestran las"
 msgstr "A continuació es mostren les"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:340
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:336
 msgid "propuestas más valoradas"
 msgstr "propostes més valorades"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:454
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:450
 msgid "propuestas más debatidas"
 msgstr "propostes més debatudes"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:568
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:564
 msgid "propuestas más recientes"
 msgstr "propostes més recents"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:681
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:677
 msgid "propuestas más consensuadas"
 msgstr "propostes més consensuades"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:792
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:788
 msgid "Sectores"
 msgstr "Blocs"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:841
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:837
 msgid "En este eje sectorial se debate acerca de:"
 msgstr "En aquest bloc es debat sobre:"
 
-#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:872
+#: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:868
 msgid "Puedes contactar con"
 msgstr "Pots contactar amb"
 
@@ -314,7 +289,7 @@ msgid "Registrarse"
 msgstr "Registrar-se"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:228
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:33
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:35
 #: account/index.php:282
 msgid "Aviso legal"
 msgstr "Avís legal"
@@ -422,7 +397,11 @@ msgstr "Enviar"
 msgid "En estos momentos no se pueden hacer nuevas propuestas"
 msgstr "En aquestos moments no es poden fer noves propostes"
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:43
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:41
+msgid "Código fuente"
+msgstr "Codi font"
+
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:52
 msgid ""
 "Utilizamos cookies para asegurar que damos la mejor experiencia al usuario "
 "en nuestra página web. Al utilizar nuestros servicios, aceptas el uso que "
@@ -432,7 +411,7 @@ msgstr ""
 "l'usuari en la nostra pàgina web. En utilitzar els nostres serveis, acceptes "
 "l'ús que fem de les cookies."
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:46
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:55
 msgid "ok"
 msgstr ""
 
@@ -487,6 +466,10 @@ msgstr "Propostes de"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:87
 msgid "Propuestas de programa"
 msgstr "Propostes de programa"
+
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:31
+msgid "Texto del título principal"
+msgstr "Com vols PODEM?"
 
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:81
 msgid "Tus propuestas"
@@ -679,72 +662,3 @@ msgstr "He llegit i accepte"
 msgid "las condiciones legales"
 msgstr "les condicions legals"
 
-#~ msgid "aviso legal registro"
-#~ msgstr "avis legal"
-
-#~ msgid ""
-#~ "Inscribirse conlleva el consentimiento expreso de los participantes al "
-#~ "tratamiento de sus datos por parte \n"
-#~ "de la asociación <a href=\"http://suin.pl/index.html.utf8.es\"><em>Suport "
-#~ "a Iniciatives Populars</em></a>, que \n"
-#~ "en <strong>ningún</strong> caso serán comunicados a terceros."
-#~ msgstr ""
-#~ "Inscriure's comporta el consentiment exprés dels participants al "
-#~ "tractament de les seves dades per part \n"
-#~ " de l'associació <a href=\"http://suin.pl/index.html.utf8.es\"> <em> "
-#~ "Suport a Iniciatives Populars </em> </a>, que \n"
-#~ " en <strong> cap </strong> cas seran comunicades a tercers."
-
-#~ msgid ""
-#~ "A los efectos prevenidos en la legislación sobre Protección de Datos de "
-#~ "Carácter Personal, \n"
-#~ "<em>Suport a Iniciatives Populars</em> informa de que los datos "
-#~ "personales cumplimentados por los participantes \n"
-#~ "en este sitio web, se incorporan a un fichero automatizado de titularidad "
-#~ "de <em>Suport a Iniciatives Populars</em>, \n"
-#~ "creado con la finalidad de gestionar el proceso, incluyendo las "
-#~ "comunicaciones, siempre no comerciales, \n"
-#~ "que se consideren del interés del participante, por cualquier medio, "
-#~ "incluido el electrónico."
-#~ msgstr ""
-#~ "Als efectes previstos a la legislació sobre protecció de dades de "
-#~ "Caràcter Personal, \n"
-#~ " <em> Suport a Iniciatives Populars </em> informa que les dades personals "
-#~ "emplenades pels participants \n"
-#~ " en aquest lloc web, s'incorporen a un fitxer automatitzat de titularitat "
-#~ "de <em> Suport a Iniciatives Populars </em>, \n"
-#~ "creat amb la finalitat de gestionar el procés, incloent les "
-#~ "comunicacions, sempre no comercials, \n"
-#~ " que es consideren de l'interès del participant, per qualsevol mitjà, "
-#~ "inclòs l'electrònic."
-
-#~ msgid ""
-#~ "Dichos datos serán tratados por <em>Suport a Iniciatives Populars</em> en "
-#~ "todo momento de acuerdo \n"
-#~ "con la legislación aplicable en la materia. Desde ésta página web, el "
-#~ "interesado puede ejercitar sus derechos \n"
-#~ "de acceso, rectificación, cancelación y oposición de sus datos, así como "
-#~ "a dejar de recibir comunicaciones \n"
-#~ "por vía electrónica, notificándolo a <em>Suport a Iniciatives Populars</"
-#~ "em> a través de su página web."
-#~ msgstr ""
-#~ "Aquestes dades seran tractades per <em> Suport a Iniciatives Populars </"
-#~ "em> en tot moment d'acord \n"
-#~ "amb la legislació aplicable en la matèria. Des d'aquesta pàgina web, el "
-#~ "interessat pot exercitar els seus drets \n"
-#~ " d'accés, rectificació, cancel·lació i oposició de les seves dades, així "
-#~ "com a deixar de rebre comunicacions \n"
-#~ " per via electrònica, notificant-ho a <em> Suport a Iniciatives Populars "
-#~ "</em> a través de la seva pàgina web."
-
-#~ msgid ""
-#~ "Esta página usa <em>cookies</em>, lo cual no es ningún problema para los "
-#~ "inscritos ni para nadie, \n"
-#~ "cumplimos el requerimiento legal de avisar."
-#~ msgstr ""
-#~ "Aquesta pàgina usa <em>cookies</em>, la qual cosa no es cap problema per "
-#~ "als inscrits ni per ningú, \n"
-#~ " cumplim amb el requeriment legal d'avisar."
-
-#~ msgid "Se está debatiendo"
-#~ msgstr "S'està debatent"

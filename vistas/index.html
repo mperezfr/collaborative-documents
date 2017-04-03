@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{#{% block title %}{% trans %} Com vols Podem? {% endtrans %}{% endblock %} #}
-{% block title %}{% trans %} Texto del título principal {% endtrans %}{% endblock %} 
+
+{% block title %}{{presentationData.mainTitle[lang]}}{% endblock %} 
 
 
 {% block scripts %}
@@ -55,23 +55,20 @@
 {% block content %}
 	<div class="row">
 		<div class="col-xs-12">
-			{# <h1 class="center">{% trans %} Com vols Podem? {% endtrans %}</h1> #}
-			<h1 class="center">{% trans %} Texto del título principal {% endtrans %}</h1> 
-			{# <h1 class="center">{% trans %} {{metainfo.mainTitle}} {% endtrans %}</h1> #}
+			<h1 class="center">{{presentationData.mainTitle[lang]}}</h1>
 
 		</div>
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<p>{% trans %}Texto introductorio{% endtrans %}</p>		
+			<p>{{presentationData.intro[lang]|raw}}</p>		
 	    </div>
 	</div>
 
 
 	<div class="row">
 		<div class="col-xs-12">
-			<p>{% trans %}Texto aviso de que no son definitivas{% endtrans %}</p>
-			<!-- FIXME: Las propuestas que se muestran a continuación están <b>pendientes de ser debatidas y aprobadas</b> en la asamblea. <b>En ningún caso suponen propuestas definitivas</b> para el programa de Guanyem Castelló. -->
+			<p>{{presentationData.warning[lang]|raw}}</p>
 		</div>
 	</div>
 

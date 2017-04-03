@@ -24,13 +24,24 @@ set entity = {name : 'Nombre',
   }
 %}
 
-{%
-                
-set metainfo = {
-   descriptions : {d1: 'a', d1: 'b'}
-}
+{% set presentationData = {
+       mainTitle : {es:"El título de la página principal",ca:"El títol de la página principal"},
 
+       intro : {es:"<b>Presentación</b> la presentación de la página principal",
+       
+                ca:""<b>Presentació</b> la presentació de la pàgina principal"
+                },
 
+       warning : {es:"mensaje de aviso tras la presentación",
+       
+                  ca:"missatge d'avis tras la presentació"
+                  },
+
+       legalAdvice : {es:"<h4>1. Protección de datos personales</h4><p>A los efectos previstos ...</p>",
+       
+                      ca:"<h4>1. Protecció de dades personals</h4><p>Als efectes previstos ...</p>"
+                  }
+       }
 %}
 
 {% block webpage %}
