@@ -29,19 +29,21 @@ se puede definir a partir de colpr-config.default.php
 En el directorio locale se encuentran los ficheros traducidos. Explicación xgettext i demás. FIXME
 
 La carpeta account contiene un par de programas para dar de alta usuarios con una validación por correo. Solo deja dar de alta
-usuarios si aparece su correo en la tabla users_can_participate. Hay que crear tres enlace (ln -s) a ficheros o carpetas en el directorio
-padre: lib, static y colpr-config.php
+usuarios si aparece su correo en la tabla users_can_participate. Hay que crear, si no están creados, tres enlaces (ln -s) a ficheros o carpetas en el directorio padre: lib, static y colpr-config.php
 
 En lib/functions.php: Comentar o descomentar // ini_set('display_errors', '1'); para mostrar o no en la web los errores.
 
-En vistas/aviso-legal.html, poner los avisos legales pertinentes y avisa del uso de cookies.
+En vistas/config.html (legalAdvice) y vistas/aviso-legal.html, poner los avisos legales pertinentes y avisar del uso de cookies.
 
 Sectores
 ------------------------
 
 A cada propuesta se le puede asignar un sector (categoría), hay que editar vistas/config.html y poner cada uno de los sectores que se quiere tener. También hay que definir una imagen por cada sector.
 
+Motor de plantillas Twig
+==========================
 
+La aplicación utiliza el motor de plantilla Twig. Por defecto lo busca en una carpeta llamada `twig` dentro de otra llamada `vendor` que ha de estar en la raiz de la carpeta de la aplicación.
 
 Base de datos
 ==========================
