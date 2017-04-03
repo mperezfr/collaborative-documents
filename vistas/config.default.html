@@ -44,5 +44,18 @@ set entity = {name : 'Nombre',
        }
 %}
 
+{% set sectors = {                     
+   firstsector  : {key   : "first-sector",
+                   title : {es:"Título del primer sector",ca:"Títol del primer sector"},
+                   image : "static/images/fs.jpg",
+                   descriptions : []},
+   secondsector  : {key   : "second-sector",
+                   title : {es:"Título del segundo sector",ca:"Títol del segon sector"},
+                   image : "static/images/ss.jpg",
+                   descriptions : []}
+                 }
+
+%}
+
 {% block webpage %}
 {% endblock %}
