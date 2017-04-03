@@ -1,27 +1,16 @@
 collaborative-documents
 ==========================
 
-Herramienta para la elaboración de un programa colaborativo basado en propuestas y votación de la gente
-
-Elaborada a partir de la Herramienta para la elaboración del programa colaborativo **Castelló en Moviment** CSeMV
-
-Elaborada a partir de la Herramienta para la elaboración del programa colaborativo de **Ganemos Zaragoza** desarrollado por  Guillermo Lázaro (https://guillermolazaro.com/)
-
+Herramienta para la elaboración de documentos colaborativos basados en propuestas y votación de la gente
 
 Instalación:
 ==========================
 
 La aplicación está lista para funcionar.
-Crea la base de datos con el script de la carpeta DB y sube todo el resto al servidor. 
-Cambia todas las conexiones de la base de datos por las tuyas y personaliza las imágenes y textos.
 
-Cambios adaptación CSeMV
-==========================
+Hay que crear la base de datos con el script de la carpeta (programa_colaborativo.sql) y subir todo el resto de ficheros al servidor.
 
-Adaptado para ser multilingüe
-Corregidos algunos bugs
-Otros cambios menores (o no tanto).
-Algunas mejoras
+Hay que configurar la conexión con la base de datos y personalizar la aplicación como se comenta en el apartado de **Configuración**.
 
 Configuración
 ==========================
@@ -29,6 +18,8 @@ Configuración
 En el fichero vistas/config.html hay que poner:
 * entity: la información referida a la entidad que matiene la web: nombre, web, logo, ...
 * metainfo: información que se pondrá en las etiquetas <meta de la cabecera HTML (<head>)
+* presentationData: Información del título, introducción, etc. para la página principal en los idiomas que se quiera.
+* sectors: Información sobre cada uno de los sectores (categorías) en los que quieren clasificar las propuestas. 
 
 En el fichero static/css/main.css definir colores y tipos de letra
 
@@ -48,11 +39,9 @@ En vistas/aviso-legal.html, poner los avisos legales pertinentes y avisa del uso
 Sectores
 ------------------------
 
-A cada propuesta se le puede asignar un sector (categoría), hay que editar vistas/nueva-propuesta.html y poner cada uno de los sectores que se quiere tener. 
-En index.html, también hay que definir una imagen y un enlace por cada sector
+A cada propuesta se le puede asignar un sector (categoría), hay que editar vistas/config.html y poner cada uno de los sectores que se quiere tener. También hay que definir una imagen por cada sector.
 
-FIXME: He intentado poner en un vector los sectores y mediante un bucle ponerlos todos en vistas/nueva-propuesta.html e index.html
-pero el problema es que twig no deja poner una variable ({{variable}}) dentro de {% trans %}: {% trans %}{{variable}}{% endtrans %}
+
 
 Base de datos
 ==========================
@@ -84,3 +73,10 @@ Tablas
 * prog_likes_propuesta: Almacena votos a favor y en contra de las propuestas
 * users: Almacena los usuarios que tienen acceso a la aplicación
 * users_can_participate: Almacena los usuarios que se pueden registrar en la web para hacer propuestas y votarlas
+
+Créditos
+==========================
+
+Elaborada a partir de la Herramienta para la elaboración del programa colaborativo **Castelló en Moviment** CSeMV
+
+Elaborada a partir de la Herramienta para la elaboración del programa colaborativo de **Ganemos Zaragoza** desarrollado por  Guillermo Lázaro (https://guillermolazaro.com/)
