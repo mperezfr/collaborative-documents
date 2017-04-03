@@ -10,9 +10,12 @@ if(isset ($_POST['propuesta'])){
 	try{
 	$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 	$consulta = "SELECT propuesta_voto FROM prog_likes_propuesta 
-	WHERE usuario_id=".$usuario." and propuesta_id = ".$propuesta.";";
+	WHERE usuario_id= :usuario and propuesta_id = :propuesta;";
+
+    $arrayusuario = array(':usuario'=>$usuario, ':propuesta'=>$propuesta);
+
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	//Se crea array vacío
 	$output= array();
 	foreach($result as $res){

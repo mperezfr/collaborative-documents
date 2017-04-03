@@ -38,8 +38,9 @@ if (isset($_POST["propuesta_id"])&& isset($_POST["usuario_id"])){
 
 			//devuelvo los datos para la actualización jquery
 			$consulta4 = array('id'=>$propuesta_id, 'usuario_id'=>$usuario_id);
-			$result=$conn->prepare('SELECT nombre, apellidos FROM users WHERE id = "'.$usuario_id.'"');
-			$result->execute();
+			$result=$conn->prepare('SELECT nombre, apellidos FROM users WHERE id = :usuario_id');
+	    	$arrayusuario = array(':usuario_id'=>$usuario_id);
+			$result->execute($arrayusuario);
 			foreach($result as $res){
 				$nombre = $res['nombre'];
 				$apellidos = $res['apellidos'];

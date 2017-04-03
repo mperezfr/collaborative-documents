@@ -97,7 +97,7 @@ if(AUTH_USER==false) {
 	$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 		
     // Test if the IP is in the database
-    $queryIP = "select id from users WHERE ip = '".$rem_ip."';";
+    $queryIP = "select id from users WHERE ip = '".$rem_ip."';"; // FIXME FIXME FIXME SQL Injection
 
     $resultado = $conn -> query($queryIP);
 	//$resultado->setFetchMode(PDO::FETCH_ASSOC); ??????????????  FIXME

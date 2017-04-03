@@ -39,7 +39,7 @@ AND c.autor_id = u.id';
 	$queryVotesDone = 'select count(*) as v from prog_likes_propuesta where usuario_id =:id';
 
    // $maxVotesReached = (intval(preparada(array('id'=>userid()),$votesDone)["v"]) >= $maxVotes);
-   $votesDone=intval(preparada(array('id'=>userid()),$queryVotesDone)["v"]);
+   $votesDone=intval(preparada(array(':id'=>userid()),$queryVotesDone)["v"]);
    $maxVotesReached=false; 
    if ($votesDone >= $maxVotes) $maxVotesReached=true;   
    

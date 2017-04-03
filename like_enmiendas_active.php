@@ -10,33 +10,37 @@ if(isset ($_POST['enmienda'])){
 	try{
 	$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 	$consulta = "SELECT enmienda_voto FROM prog_likes_enmiendas 
-	WHERE enmienda_id = ".$enmienda." AND usuario_id = ".$usuario.";";
+	WHERE enmienda_id = :enmienda AND usuario_id = :usuario;";
+	$arrayusuario = array(':enmienda'=>$enmienda, ':usuario'=>$usuario);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	foreach($result as $res){
 		$enmienda_voto=$res['enmienda_voto'];
 	}
 
 	if ($enmienda_voto==1){
-		$consulta="DELETE FROM prog_likes_enmiendas WHERE enmienda_id = ".$enmienda." AND usuario_id = ".$usuario.";";
-		listar($consulta);
-		$suma="UPDATE prog_enmiendas SET sum_likes=sum_likes+(-1) WHERE id = ".$enmienda.";";
-		listar($suma);
+		$consulta="DELETE FROM prog_likes_enmiendas 
+    	WHERE enmienda_id = :enmienda AND usuario_id = :usuario;";
+    	$arrayusuario = array(':enmienda'=>$enmienda, ':usuario'=>$usuario);
+		listarpreparada($arrayusuario,$consulta);
+		$suma="UPDATE prog_enmiendas SET sum_likes=sum_likes+(-1) WHERE id = :enmienda;";
+    	$arrayusuario = array(':enmienda'=>$enmienda);
+		listarpreparada($arrayusuario,$suma);
 
 	}if ($enmienda_voto==-1){
-		$consulta="DELETE FROM prog_likes_enmiendas WHERE enmienda_id = ".$enmienda." AND usuario_id = ".$usuario.";";
-		listar($consulta);
+		$consulta="DELETE FROM prog_likes_enmiendas 
+    	WHERE enmienda_id = :enmienda AND usuario_id = :usuario;";
+    	$arrayusuario = array(':enmienda'=>$enmienda, ':usuario'=>$usuario);
+		listarpreparada($arrayusuario,$consulta);
 		$suma="UPDATE prog_enmiendas SET sum_likes=sum_likes+1 WHERE id = ".$enmienda.";";
-		listar($suma);
-
+    	$arrayusuario = array(':enmienda'=>$enmienda);
+		listarpreparada($arrayusuario,$suma);
 	}
 
-
-
-	
-	$consulta = "SELECT sum_likes FROM prog_enmiendas WHERE id = ".$enmienda.";";
-	$result = $conn->prepare($consulta);
-	$result->execute();
+	$consulta = "SELECT sum_likes FROM prog_enmiendas WHERE id = :enmienda;";
+   	$arrayusuario = array(':enmienda'=>$enmienda);
+   	$result = $conn->prepare($consulta);
+	$result->execute($arrayusuario);
 	//Se crea array vacío
 	$output= array();
 	foreach($result as $res){

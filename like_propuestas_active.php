@@ -10,31 +10,41 @@ if(isset ($_POST['propuesta'])){
 	try{
 	$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 	$consulta = "SELECT propuesta_voto FROM prog_likes_propuesta 
-	WHERE propuesta_id = ".$propuesta." AND usuario_id = ".$usuario.";";
+	WHERE propuesta_id = :propuesta AND usuario_id = :usuario;";
+	$arrayusuario = array(':propuesta'=>$propuesta, ':usuario'=>$usuario);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	foreach($result as $res){
 		$propuesta_voto=$res['propuesta_voto'];
 	}
 
 	if ($propuesta_voto==1){
-		$consulta="DELETE FROM prog_likes_propuesta WHERE propuesta_id = ".$propuesta." AND usuario_id = ".$usuario.";";
-		listar($consulta);
-		$suma="UPDATE prog_propuestas SET sum_likes=sum_likes-1, positivos=positivos-1 WHERE id = ".$propuesta.";";
-		listar($suma);
+		$consulta="DELETE FROM prog_likes_propuesta 
+    	WHERE propuesta_id = :propuesta AND usuario_id = :usuario;";
+    	$arrayusuario = array(':propuesta'=>$propuesta, ':usuario'=>$usuario);
+		listarpreparada($arrayusuario,$consulta);
+		$suma="UPDATE prog_propuestas SET sum_likes=sum_likes-1, positivos=positivos-1 
+		WHERE id = :propuesta;";
+    	$arrayusuario = array(':propuesta'=>$propuesta);		
+		listarpreparada($arrayusuario,$suma);
 
 	}if ($propuesta_voto==-1){
-		$consulta="DELETE FROM prog_likes_propuesta WHERE propuesta_id = ".$propuesta." AND usuario_id = ".$usuario.";";
-		listar($consulta);
-		$suma="UPDATE prog_propuestas SET sum_likes = sum_likes+1, negativos = negativos-1 WHERE id = ".$propuesta.";";
-		listar($suma);
+		$consulta="DELETE FROM prog_likes_propuesta 
+    	WHERE propuesta_id = :propuesta AND usuario_id = :usuario;";
+    	$arrayusuario = array(':propuesta'=>$propuesta, ':usuario'=>$usuario);
+		listarpreparada($arrayusuario,$consulta);
+		$suma="UPDATE prog_propuestas SET sum_likes = sum_likes+1, negativos = negativos-1 
+		WHERE id = :propuesta;";
+    	$arrayusuario = array(':propuesta'=>$propuesta);		
+		listarpreparada($arrayusuario,$suma);
 
 	}
 
 	
-	$consulta = "SELECT sum_likes FROM prog_propuestas WHERE id = ".$propuesta.";";
+	$consulta = "SELECT sum_likes FROM prog_propuestas WHERE id = :propuesta;";
+    $arrayusuario = array(':propuesta'=>$propuesta);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	//Se crea array vacío
 	$output= array();
 	foreach($result as $res){

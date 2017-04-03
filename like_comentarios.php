@@ -13,9 +13,10 @@ if(isset ($_POST['cuenta'])){
 	try{
 	$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 	$consulta = "SELECT comentario_voto FROM prog_likes_comentarios 
-	WHERE comentario_id = ".$comentario." AND usuario_id = ".$usuario.";";
+	WHERE comentario_id = :comentario AND usuario_id = :usuario;";
+	$arrayusuario = array(':comentario'=>$comentario, ':usuario'=>$usuario);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	foreach($result as $res){
 		$comentario_voto=$res['comentario_voto'];
 	}
@@ -48,9 +49,10 @@ if(isset ($_POST['cuenta'])){
 	
 
 	//recuento votos
-	$consulta = "SELECT sum_likes FROM prog_comentarios WHERE id = ".$comentario.";";
+	$consulta = "SELECT sum_likes FROM prog_comentarios WHERE id = :comentario;";
+	$arraycomentario = array(':comentario'=>$comentario);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arraycomentario);
 	//Se crea array vacío
 	$output= array();
 	foreach($result as $res){

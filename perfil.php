@@ -9,15 +9,18 @@ $user=autentificado();
 $consultaPropuestasUsuario = 
 'SELECT u.nombre, u.apellidos, p.id, p.titulo, p.comentarios, p.sum_likes, p.positivos, p.negativos, p.sector, p.barrio
 FROM users AS u join prog_propuestas AS p ON (`autor_id` = u.id)
-WHERE  `autor_id` = '.$user['id'].'
+WHERE  `autor_id` = :usuario_id
 ORDER BY p.id;';
+
+$arrayusuario = array(':usuario_id'=>$user['id']);
+
 
 // Propuestas votadas en orden cronológico del usuario
 $consultaVotadasUsuario = 
 'SELECT u.nombre, u.apellidos, p.id, p.titulo, p.comentarios, p.sum_likes, p.positivos, p.negativos, p.sector, p.barrio
 FROM users AS u join prog_propuestas AS p ON (`autor_id` = u.id)
 JOIN prog_likes_propuesta AS lp ON (p.id = lp.propuesta_id)
-WHERE lp.usuario_id = '.$user['id'].'
+WHERE lp.usuario_id = :usuario_id
 ORDER BY p.id DESC;';
 
 
@@ -26,8 +29,8 @@ ORDER BY p.id DESC;';
 return;*/
 
 $datos = array('user'=>$user,
-               'propusuario'=>listar($consultaPropuestasUsuario),
-               'votosusuario'=>listar($consultaVotadasUsuario),
+               'propusuario'=>listarpreparada($arrayusuario, $consultaPropuestasUsuario),
+               'votosusuario'=>listarpreparada($arrayusuario, $consultaVotadasUsuario),
                'openProps'=>$openProps,   // Indica si se pueden hacer nuevas propuestas
                'ipr'=>getRealIpAddr(),    // La IP desde la que se ha hecho la consulta
                 'lang'=>$lang);           //FIXME: Mirar si el lang se puede leer desde la plantilla twig

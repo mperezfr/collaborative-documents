@@ -11,9 +11,10 @@ if(isset ($_POST['usuario_id'])){
 	try{
 	$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
 	$consulta = "SELECT * FROM prog_likes_enmiendas
-	WHERE usuario_id=".$usuario.";";
+	WHERE usuario_id= :usuario;";
+	$arrayusuario = array(':usuario'=>$usuario);
 	$result = $conn->prepare($consulta);
-	$result->execute();
+	$result->execute($arrayusuario);
 	//Se crea array vacío
 	$output= array();
 	foreach($result as $res){
