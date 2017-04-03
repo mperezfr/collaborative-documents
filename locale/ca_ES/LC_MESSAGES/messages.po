@@ -368,6 +368,9 @@ msgstr "En aquestos moments no es poden fer noves propostes"
 msgid "Código fuente"
 msgstr "Codi font"
 
+msgid "Licencia"
+msgstr "Llicència"
+
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:52
 msgid ""
 "Utilizamos cookies para asegurar que damos la mejor experiencia al usuario "
