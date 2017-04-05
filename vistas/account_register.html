@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}{{presentationData.mainTitle[lang]}}{% endblock %} 
+
+
+
+{% block content %}
+
+{% if finalmessage %}
+    <div class="row">	
+	  <div class="col-xs-12">
+	    {{finalmessage| raw}}
+	  </div>	
+	</div>
+
+
+
+
+{% else %}
+
+
+
+    <div class="form-wrap">
+        <div class="row">
+
+            <div id="signup">
+                <p>{{presentationData.registerConditions[lang]|raw}} </p>
+           
+                {% for prob in dataproblems %}
+                <div class="row">	
+            	  <div class="col-xs-12">
+            	    {{prob | raw}}
+            	  </div>	
+            	</div>
+                {% endfor%}
+
+                <div class="form-header">
+                    <i class="fa fa-user"></i>
+                    <h2>{% trans %}Alta{% endtrans %}</h2>
+                </div>
+                <form id="signup_form" method="post" action="">
+                <div class="form-main">
+                    <div class="form-group">
+                        <input type="text" name="name_signup" id="name_signup" class="form-control" placeholder="{% trans %}Nombre{% endtrans %}" value="{{formdata['name_signup']}}">
+                        <input type="text" name="apellidos_signup" id="apellidos_signup" class="form-control" placeholder="{% trans %}Apellidos{% endtrans %}" value="{{formdata['apellidos_signup']}}">
+                        <input type="text" name="email_signup" id="email_signup" class="form-control" placeholder="{% trans %}Email{% endtrans %}" value="{{formdata['email_signup']}}">
+                        <input type="password" name="pass_signup" id="pass_signup" class="form-control" placeholder="{% trans %}Contraseña{% endtrans %}">
+                        <input type="password" name="pass2_signup" id="pass2_signup" class="form-control" placeholder="{% trans %}Repetir Contraseña{% endtrans %}">
+                        <input type="checkbox" name="acceptconditions" value="acceptconditions" {% if formdata['acceptconditions']%}checked{% endif %}> <span style="color:white;">{% trans %}He leído y acepto{% endtrans %}</span> <a target="_blank" href="aviso-legal.php" style="color:white;">{% trans %}las condiciones legales{% endtrans %}</a>
+                    </div>
+                    <button id="button_signup" type="submit" class="btn btn-block signin">{% trans %}Registrarse{% endtrans %}</button>
+                </form>
+                </div>
+                <div class="form-footer">
+
+                <a target="_blank" href="../aviso-legal.php">{% trans %}Aviso legal{% endtrans %}</a>
+                    </div>
+
+                </div>  
+        
+    </div>
+{% endif%}    
+{% endblock %}

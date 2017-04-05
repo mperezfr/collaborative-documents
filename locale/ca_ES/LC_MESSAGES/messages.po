@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-03 04:12+0200\n"
+"POT-Creation-Date: 2017-04-05 16:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:128
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:104
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:353
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:357
 msgid "SUBIR UNA NUEVA PROPUESTA"
 msgstr "PUJAR UNA NOVA PROPOSTA"
 
@@ -37,8 +37,8 @@ msgstr "Hi ha un total de"
 
 #: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:166
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:134
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:96
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:230
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:100
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:234
 msgid "propuestas"
 msgstr "propostes"
 
@@ -83,8 +83,8 @@ msgstr "Propostes en ordre aleatori"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:381
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:473
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:565
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:138
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:272
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:142
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:276
 msgid "autor:"
 msgstr "autor:"
 
@@ -98,8 +98,8 @@ msgstr "autor:"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:389
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:481
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:573
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:146
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:280
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:150
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:284
 msgid "comentarios"
 msgstr "comentaris"
 
@@ -113,8 +113,8 @@ msgstr "comentaris"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:395
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:487
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:579
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:152
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:286
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:156
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:290
 msgid "de votos positivos de un total de"
 msgstr "de vots positius d'un total de"
 
@@ -128,8 +128,8 @@ msgstr "de vots positius d'un total de"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:399
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:491
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:583
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:156
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:290
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:160
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:294
 msgid "votos."
 msgstr "vots."
 
@@ -143,8 +143,8 @@ msgstr "vots."
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:413
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:505
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:597
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:171
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:305
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:175
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:309
 msgid "Barrio:"
 msgstr "Barri:"
 
@@ -171,8 +171,8 @@ msgstr "No hi han encara propostes."
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:439
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:531
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:623
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:197
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:331
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:201
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:335
 msgid "Envíanos la tuya"
 msgstr "Envia'ns la teua"
 
@@ -210,6 +210,12 @@ msgstr "En aquest bloc es debat sobre:"
 #: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:868
 msgid "Puedes contactar con"
 msgstr "Pots contactar amb"
+
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:31
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:43
+#, fuzzy
+msgid "Activación de cuenta"
+msgstr "A continuació es mostren"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:33
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:161
@@ -255,13 +261,13 @@ msgstr "Usuari o contrasenya incorrecta"
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:152
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:211
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:245
-#: account/index.php:272
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:115
 msgid "Email"
 msgstr "Email"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:156
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:215
-#: account/index.php:273
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:121
 msgid "Contraseña"
 msgstr "Contrasenya"
 
@@ -269,28 +275,30 @@ msgstr "Contrasenya"
 msgid "Recordar la contraseña"
 msgstr "Recordar la contrasenya"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:182
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:184
 msgid "Regístrate"
 msgstr "Registra't"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:203
-#: account/index.php:270
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:121
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:103
 msgid "Nombre"
 msgstr "Nom"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:207
-#: account/index.php:271
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:127
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:109
 msgid "Apellidos"
 msgstr "Cognoms"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:220
-#: account/index.php:277
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:140
 msgid "Registrarse"
 msgstr "Registrar-se"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:228
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:35
-#: account/index.php:282
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:148
 msgid "Aviso legal"
 msgstr "Avís legal"
 
@@ -364,14 +372,15 @@ msgstr "Enviar"
 msgid "En estos momentos no se pueden hacer nuevas propuestas"
 msgstr "En aquestos moments no es poden fer noves propostes"
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:41
-msgid "Código fuente"
-msgstr "Codi font"
-
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:39
 msgid "Licencia"
 msgstr "Llicència"
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:52
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:45
+msgid "Código fuente"
+msgstr "Codi font"
+
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:56
 msgid ""
 "Utilizamos cookies para asegurar que damos la mejor experiencia al usuario "
 "en nuestra página web. Al utilizar nuestros servicios, aceptas el uso que "
@@ -381,7 +390,7 @@ msgstr ""
 "l'usuari en la nostra pàgina web. En utilitzar els nostres serveis, acceptes "
 "l'ús que fem de les cookies."
 
-#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:55
+#: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:59
 msgid "ok"
 msgstr ""
 
@@ -428,6 +437,30 @@ msgstr "Pàgina no trobada"
 msgid "La página que buscas no se encuentra en este servidor"
 msgstr "La pàgina que busques no es troba en aquest servidor"
 
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:33
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:113
+#, fuzzy
+msgid "Actualización de datos"
+msgstr "Validació del correu"
+
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:86
+msgid "Si no quieres cambiar el password, deja los dos campos en blanco"
+msgstr "Si no vols canviar el password, deixa els dos camps en blanc"
+
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:133
+#, fuzzy
+msgid "Nueva Contraseña"
+msgstr "Contrasenya"
+
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:137
+#, fuzzy
+msgid "Repetir nueva Contraseña"
+msgstr "Repetir la contrasenya"
+
+#: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:142
+msgid "Actualizar"
+msgstr "Actualitzar"
+
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:37
 msgid "Propuestas de"
 msgstr "Propostes de"
@@ -437,27 +470,31 @@ msgstr "Propostes de"
 msgid "Propuestas de programa"
 msgstr "Propostes de programa"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:81
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:74
+msgid "Modificar datos de usuario ..."
+msgstr "Modificar dades d'usuari"
+
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:85
 msgid "Tus propuestas"
 msgstr "Les teues propostes"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:92
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:96
 msgid "Has hecho un total de"
 msgstr "Has fet un total de"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:195
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:199
 msgid "No has hecho propuestas todavía."
 msgstr "No has fet encara propostes."
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:215
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:219
 msgid "Propuestas que has votado"
 msgstr "Propostes que has votat"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:226
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:230
 msgid "Has votado un total de"
 msgstr "Has votat un total de"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:329
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:333
 msgid "No has votado propuestas todavía."
 msgstr "No has votat encara propostes."
 
@@ -524,107 +561,88 @@ msgstr "Respondre"
 msgid "Respuesta de"
 msgstr "Resposta de"
 
-#: account/activate.php:14
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:95
+msgid "Alta"
+msgstr "Alta"
+
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:125
+msgid "Repetir Contraseña"
+msgstr "Repetir la contrasenya"
+
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:133
+msgid "He leído y acepto"
+msgstr "He llegit i accepte"
+
+#: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:135
+msgid "las condiciones legales"
+msgstr "les condicions legals"
+
 msgid "Activate your Account"
 msgstr "Activa el teu conter"
 
-#: account/activate.php:118 account/activate.php:157
 msgid ""
-"Este correo no existe o ya ha sido activado o la cadena hash no es correcta"
+"Este correo no existe o ya ha sido activado o la cadena hash no es "
+"correcta"
 msgstr ""
 "Aquest correu no existeix o ja ha estat activat o la cadena hash no és "
 "correcta"
 
-#: account/activate.php:122 account/index.php:166
 msgid "El usuario "
 msgstr "L'usuari "
 
-#: account/activate.php:122
 msgid "se ha activado, ya puedes acceder a la web "
 msgstr "s'ha activat, ja pots accedir a la web "
 
-#: account/index.php:124
 msgid "Se deben aceptar las "
-msgstr "S'han d'accpetar les "
+msgstr "S'han d'acceptar les "
 
-#: account/index.php:124
 msgid "Condiciones legales"
 msgstr "Condicions legals"
 
-#: account/index.php:133
 msgid "El nombre está vacío"
 msgstr "El nom està buit"
 
-#: account/index.php:140
 msgid "Los apellidos están vacíos"
 msgstr "Els cognoms estan buits"
 
-#: account/index.php:146
 msgid "El correo está vacío"
 msgstr "El correu està buit"
 
-#: account/index.php:151
 msgid "El correo no es válido"
 msgstr "El correu no és vàlid"
 
-#: account/index.php:166
 msgid " ya existe en la base de datos"
 msgstr " ja existeis a la base de dades"
 
-#: account/index.php:179
 msgid "El correo no está autorizado para crear un nuevo usuario"
 msgstr "El correu no està autoritzat per a crear un nou usuari"
 
-#: account/index.php:190
 msgid "Los passwords son diferentes"
 msgstr "Les contrasenyes son diferents"
 
-#: account/index.php:197
 msgid "El password debe tener al menos "
 msgstr "La contrasenya ha de tenir al menys "
 
-#: account/index.php:197
 msgid " carácteres"
 msgstr "caràcters"
 
-#: account/index.php:203
 msgid "La cuenta se ha creado,"
 msgstr "El conter s'ha creat,"
 
-#: account/index.php:203
 msgid ""
 "por favor, actívala accediendo al link que se te ha enviado por correo a "
-msgstr "per favor, activa'l accedint al link que se t'ha enviat per correu a "
-
-#: account/index.php:204
-msgid ""
-"<br /><br /> <b>Revisa la carpeta de spam o correo basura</b> si no ves el "
-"correo en la carpeta de entrada."
 msgstr ""
-"<br /><br /> <b>Revisa la carpeta de spam o correu brossa</b> si no veus el "
-"correu a la carpeta d'entrada."
+"per favor, activa'l accedint al link que se t'ha enviat per correu a "
 
-#: account/index.php:205
+msgid ""
+"<br /><br /> <b>Revisa la carpeta de spam o correo basura</b> si no ves "
+"el correo en la carpeta de entrada."
+msgstr ""
+"<br /><br /> <b>Revisa la carpeta de spam o correu brossa</b> si no veus "
+"el correu a la carpeta d'entrada."
+
 msgid "<br />Marca el correo como <b>«No es spam»</b>."
 msgstr "<br />Marca el correu com <b>«No és spam»</b>."
 
-#: account/index.php:212
-msgid "Validación de correo"
-msgstr "Validació del correu"
-
-#: account/index.php:213
 msgid "Mensaje Validación correo"
 msgstr "Missatge de Validació de correu"
-
-#: account/index.php:274
-msgid "Repetir Contraseña"
-msgstr "Repetir la contrasenya"
-
-#: account/index.php:275
-msgid "He leído y acepto"
-msgstr "He llegit i accepte"
-
-#: account/index.php:275
-msgid "las condiciones legales"
-msgstr "les condicions legals"
-

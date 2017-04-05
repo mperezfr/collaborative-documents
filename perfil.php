@@ -3,6 +3,10 @@ include_once "lib/functions.php";
 
 include_once "colpr-config.php";
 
+if (!isset($_SESSION["usuario"])){
+	header( 'Location: login.php' );
+}else{
+
 $user=autentificado();
 
 // Propuestas en orden cronológico del usuario
@@ -45,3 +49,4 @@ return;*/
 
 $template = $twig->loadTemplate('perfil.html');               
 echo $template->render($datos);
+}

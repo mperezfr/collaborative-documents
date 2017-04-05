@@ -28,8 +28,8 @@ se puede definir a partir de colpr-config.default.php
 
 En el directorio locale se encuentran los ficheros traducidos. Explicación xgettext i demás. FIXME
 
-La carpeta account contiene un par de programas para dar de alta usuarios con una validación por correo. Solo deja dar de alta
-usuarios si aparece su correo en la tabla users_can_participate. Hay que crear, si no están creados, tres enlaces (ln -s) a ficheros o carpetas en el directorio padre: lib, static y colpr-config.php
+Los ficheros account_ sirven para el mantenimiento de usuarios con una validación por correo al registrarse. Solo deja dar de alta
+usuarios si aparece su correo en la tabla users_can_participate.
 
 En lib/functions.php: Comentar o descomentar // ini_set('display_errors', '1'); para mostrar o no en la web los errores.
 

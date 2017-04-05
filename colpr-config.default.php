@@ -43,6 +43,7 @@ define('DB_HOST2', 'localhost');
 //Data about the entity maintaining the web
 $entityData = array('fromemail'=>"contacte@correo.info",
                     'replytoemail'=>"contacte2@correo2.info",
+                    'noreplytoemail'=>"noreply@correo.info",
                     'thisweb'=>"https://www/this"
 );
 

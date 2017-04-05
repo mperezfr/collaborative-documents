@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{% trans %}Activación de cuenta{% endtrans %}{% endblock %} 
+
+
+{% block content %}
+
+	<div class="row">
+		<div class="col-xs-12">
+			<h1 class="center">{% trans %}Activación de cuenta{% endtrans %}</h1> 
+		</div>
+	</div>
+
+{% if dataproblems %}          
+    {% for prob in dataproblems %}
+    <div class="row">	
+	  <div class="col-xs-12">
+	    {{prob | raw}}
+	  </div>	
+	</div>
+    {% endfor%}
+           
+{% else %}
+  <div class="statusmsg">El usuario {{thisuser['nombre']}} ({{thisuser['email']}}) se ha activado, 
+  ya puedes acceder a la web <a href="{{entity['thisweb']}}">{{entity['thisweb']}}</a></div>
+{% endif%}
+
+{% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-03 03:57+0200\n"
+"POT-Creation-Date: 2017-04-03 04:12+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -303,39 +303,6 @@ msgstr "Recuperar la contrasenya"
 msgid "Aviso legal y política de cookies"
 msgstr "Avís legal i política de cookies"
 
-# msgid "Regístrate en el censo"
-# msgstr "Regístrat al cens"
-#: /tmp/cache/e2/e20d844a46ea9657be394d7a9e3b96ffd18ebfefd6b98f23ee05d5a891e6eda2.php:57
-msgid "Texto aviso legal con etiquetas html"
-msgstr ""
-"<div class='entry-content description clearfix'>\t\t\t    <h4>1. Protecció "
-"de dades personals</h4><p>Als efectes previstos a la Llei Orgànica 15/1999 "
-"de 13 de desembre sobre Protecció de Dades de Caràcter Personal, se "
-"t’informa que les dades personals proporcionades s’incorporaran al fitxer "
-"denominat “Adhesions” que l’Associació Cultural La Lluita (Avinguda de la "
-"Marina Alta 79 2n, 03740, Gata) ha obert per recollir els suports al "
-"manifest Actualitzar Podem, aprofundir el canvi.</p><p>Aquest escrit té "
-"l’objectiu d’informar-te de l’ús que farem de les teues dades personals. Les "
-"teues dades no seran transmeses a tercers ni a òrgans públics, amb "
-"l’excepció de quan la llei ho establisca com a obligatori.</p><p>Si marques "
-"l’opció “Signe la crida” acceptes la visibilització de les teues següents "
-"dades personals: “Nom, cognoms, municipi i càrrec/professió” en la web "
-"aprofundirelcanvi.info. Així mateix, si marques l&#8217;opció &#8220;Vull "
-"rebre més informació&#8221; acceptes que l’Associació Cultural La Lluita es "
-"comunique amb tu mitjançant e-mail per informar-te sobre les pròximes "
-"convocatòries o activitats que puguem organitzar.</p><p>Així mateix, "
-"confirmes que les dades emprades són verídiques, exactes i actualitzades.</"
-"p><h4>2. Per donar-te de baixa</h4><p>Malgrat l’acceptació, tens dret a "
-"eliminar les teues dades del fitxer “Adhesions” declarat per l’Associació "
-"Cultural la Lluita a l’Agència Espanyola de Protecció de Dades. Per a fer-"
-"ho, hauràs d’escriure un e-mail a <a href='mailto:aprofundirelcanvi@gmail."
-"com'>aprofundirelcanvi@gmail.com</a> indicant que desitges eliminar "
-"informació del nostre fitxer, explicant quina és la informació a suprimir, "
-"adjuntant una fotocòpia del teu DNI.</p><h4>3. Acceptació de les condicions "
-"generals</h4><p>En marcar la casella “He llegit i accepte les condicions” "
-"declares haver llegit aquest avís i estar conforme amb el seu contingut.</p>"
-"\t\t\t\t    </div><!-- .entry-content -->"
-
 #: /tmp/cache/e2/e20d844a46ea9657be394d7a9e3b96ffd18ebfefd6b98f23ee05d5a891e6eda2.php:63
 msgid "Texto aviso uso de cookies con etiquetas html"
 msgstr ""
@@ -400,6 +367,9 @@ msgstr "En aquestos moments no es poden fer noves propostes"
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:41
 msgid "Código fuente"
 msgstr "Codi font"
+
+msgid "Licencia"
+msgstr "Llicència"
 
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:52
 msgid ""
@@ -466,10 +436,6 @@ msgstr "Propostes de"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:87
 msgid "Propuestas de programa"
 msgstr "Propostes de programa"
-
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:31
-msgid "Texto del título principal"
-msgstr "Com vols PODEM?"
 
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:81
 msgid "Tus propuestas"
@@ -579,7 +545,7 @@ msgstr "s'ha activat, ja pots accedir a la web "
 
 #: account/index.php:124
 msgid "Se deben aceptar las "
-msgstr "S'han d'accpetar les "
+msgstr "S'han d'acceptar les "
 
 #: account/index.php:124
 msgid "Condiciones legales"
