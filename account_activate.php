@@ -42,7 +42,7 @@ if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['hash']) && !
 		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         $muser = array('nombre'=>$nombre,'apellidos'=>$apellidos,'email'=>$email,'pass'=>$password);
         $result=$conn->prepare( "INSERT INTO users(nombre, apellidos, email, password) 
-            VALUES(:nombre, :apellidos, LOWER(:email), :pass);");
+            VALUES(:nombre, :apellidos, TRIM(LOWER(:email)), :pass);");
 		$result->execute($muser);
 
         // DELETE user from users_can_participate
