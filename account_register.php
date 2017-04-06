@@ -70,7 +70,7 @@ $template = $twig->loadTemplate('account_register.html');
            		$conn = new PDO('mysql:host='.DB_HOST.';dbname='.DB_NAME.';charset=utf8', DB_USER, DB_PASS);
         		$conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
         		$muser = array('email'=>$email);
-        		$result=$conn->prepare( "SELECT count(*) as nemail FROM users_can_participate WHERE email=:email;");
+        		$result=$conn->prepare( "SELECT count(*) as nemail FROM users_can_participate WHERE UPPER(email)=UPPER(:email);");
         		$result->execute($muser);
         		foreach ($result as $cont) {
         			$nemail = $cont['nemail'];
