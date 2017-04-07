@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-07 10:14+0200\n"
+"POT-Creation-Date: 2017-04-07 13:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: /tmp/cache/ff/ff104373920d77d37fae36861d84f91dbea69ed5a152c78fb77a251e1b3ca4c6.php:128
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:104
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:357
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:365
 msgid "SUBIR UNA NUEVA PROPUESTA"
 msgstr "PUJAR UNA NOVA PROPOSTA"
 
@@ -84,7 +84,7 @@ msgstr "Propostes en ordre aleatori"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:473
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:565
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:142
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:276
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:284
 msgid "autor:"
 msgstr "autor:"
 
@@ -99,7 +99,7 @@ msgstr "autor:"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:481
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:573
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:150
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:284
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:292
 msgid "comentarios"
 msgstr "comentaris"
 
@@ -114,7 +114,7 @@ msgstr "comentaris"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:487
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:579
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:156
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:290
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:298
 msgid "de votos positivos de un total de"
 msgstr "de vots positius d'un total de"
 
@@ -129,7 +129,7 @@ msgstr "de vots positius d'un total de"
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:491
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:583
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:160
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:294
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:302
 msgid "votos."
 msgstr "vots."
 
@@ -144,7 +144,7 @@ msgstr "vots."
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:505
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:597
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:175
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:309
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:317
 msgid "Barrio:"
 msgstr "Barri:"
 
@@ -172,7 +172,7 @@ msgstr "No hi han encara propostes."
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:531
 #: /tmp/cache/ee/eebe92144cb8fe358eb36ccc347c6d84c094f1ec37fe1513a6848c1a01cbe869.php:623
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:201
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:335
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:343
 msgid "Envíanos la tuya"
 msgstr "Envia'ns la teua"
 
@@ -486,7 +486,15 @@ msgstr "Propostes que has votat"
 msgid "Has votado un total de"
 msgstr "Has votat un total de"
 
-#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:333
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:242
+msgid ""
+"Puedes quitar el voto dado a una propuesta accediendo a ella y volviendo a "
+"pinchar sobre el voto que emitiste"
+msgstr ""
+"Pots llevar el vot donat a una proposta accedint a ella i tornant a punxar sobre el "
+"vot que vas emetre"
+
+#: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:341
 msgid "No has votado propuestas todavía."
 msgstr "No has votat encara propostes."
 
@@ -656,4 +664,3 @@ msgstr "Missatge de Validació de correu"
 #: account_update.php:62
 msgid "Los datos se han actualizado:"
 msgstr "Les dades s'han actualitzat:"
-
