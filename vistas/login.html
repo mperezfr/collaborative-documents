@@ -95,17 +95,13 @@ $(document).ready(function() {
                 </div>
                 <div class="form-footer">
                     <div class="row">
-                        <div class="col-xs-4">
+                        <div class="col-xs-6">
                             <i class="fa fa-unlock-alt"></i>
-                            {# <a href="https://primaries.castelloenmoviment.org/?do=in">{% trans %}Recordar la contraseña{% endtrans %}</a>
-                            #}
-                            <a href="" id="forgot_from_1">{% trans %}Recordar la contraseña{% endtrans %}</a>
+                            <a href="" id="forgot_from_1">{% trans %}Recuperar la contraseña{% endtrans %}</a>
                         </div>
-                        <div class="col-xs-4">
+                        <div class="col-xs-6">
                             <i class="fa fa-check"></i>
-                            {# <a href="https://primaries.castelloenmoviment.org/?do=in">{% trans %}Regístrate en el censo{% endtrans %}</a>
-                            #}
-                            {# Si se deja href en blanco con javascript se muestra el formulario id="signup" #}
+                            {# Si se deja href en blanco con el id signup_from_1, con javascript se muestra el formulario id="signup" #}
                             {# <a href="" id="signup_from_1">{% trans %}Regístrate{% endtrans %}</a> #}
                             <a href="account_register.php">{% trans %}Regístrate{% endtrans %}</a>
                         </div>
@@ -132,13 +128,8 @@ $(document).ready(function() {
                 </div>
                 <div class="form-footer">
                 
-                {% trans %}Aviso legal{% endtrans %}
-                {#
-                    <p>De conformidad con lo dispuesto en la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal, te informamos de que los datos personales que nos proporciones así como aquellos que nos facilites en un futuro serán incorporados a un fichero automatizado de datos de carácter personal responsabilidad de Guanyem Castelló, con la finalidad de gestionar las comunicaciones que podamos realizar contigo.
-
-                    <p>Para ejercitar los derechos de acceso, rectificación, oposición y cancelación reconocidos por la legislación vigente, el interesado deberá realizar una comunicación a info@castelloenmoviment.org, indicando como asunto “Protección de datos”.
-
-                    <p>Asumimos que al registrarte estás conforme con estas advertencias legales.#}
+                <a target="_blank" href="aviso-legal.php">{% trans %}Aviso legal{% endtrans %}</a>
+                
                 </div>      
             </div>
 

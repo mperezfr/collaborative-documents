@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-05 16:39+0200\n"
+"POT-Creation-Date: 2017-04-07 10:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -215,6 +215,14 @@ msgstr ""
 msgid "Activación de cuenta"
 msgstr ""
 
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:77
+msgid "El usuario"
+msgstr ""
+
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:85
+msgid "se ha activado, ya puedes acceder a la web"
+msgstr ""
+
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:33
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:161
 #: /tmp/cache/09/09a6ca7ed45af90159114de00bc7aa1c3f9f6d9351ad06dbb149c86480126eab.php:192
@@ -257,50 +265,50 @@ msgid "Usuario o contraseña incorrecta. Inténtalo otra vez."
 msgstr ""
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:152
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:211
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:245
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:208
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:241
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:115
 msgid "Email"
 msgstr ""
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:156
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:215
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:212
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:121
 msgid "Contraseña"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:172
-msgid "Recordar la contraseña"
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:171
+msgid "Recuperar la contraseña"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:184
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:181
 msgid "Regístrate"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:203
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:200
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:121
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:103
 msgid "Nombre"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:207
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:204
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:127
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:109
 msgid "Apellidos"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:220
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:217
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:140
 msgid "Registrarse"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:228
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:225
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:35
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:148
 msgid "Aviso legal"
 msgstr ""
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:250
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:246
 msgid "Recuperar contraseña"
 msgstr ""
 
@@ -311,14 +319,6 @@ msgstr ""
 
 #: /tmp/cache/e2/e20d844a46ea9657be394d7a9e3b96ffd18ebfefd6b98f23ee05d5a891e6eda2.php:63
 msgid "Texto aviso uso de cookies con etiquetas html"
-msgstr ""
-
-#: /tmp/cache/e2/e20d844a46ea9657be394d7a9e3b96ffd18ebfefd6b98f23ee05d5a891e6eda2.php:71
-msgid ""
-"El código utilizado en la web ha sido adaptado  por Miguel Pérez (Castelló "
-"en Moviment) a partir del proyecto inicial \n"
-"de <a href=\"https://guillermolazaro.com\" target=\"blank\"> Guillermo "
-"Lázaro </a>."
 msgstr ""
 
 #: /tmp/cache/00/00e29bf4592bba60e2a39184c5fd1eedfa7a68b291f2b28dff9e886ca88a8e92.php:33
@@ -560,4 +560,88 @@ msgstr ""
 
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:135
 msgid "las condiciones legales"
+msgstr ""
+
+#: account_activate.php:25 account_activate.php:57
+msgid ""
+"Este correo no existe o ya ha sido activado o la cadena hash no es correcta"
+msgstr ""
+
+#: account_register.php:29
+msgid "Se deben aceptar las "
+msgstr ""
+
+#: account_register.php:29
+msgid "Condiciones legales"
+msgstr ""
+
+#: account_register.php:35 account_update.php:35
+msgid "El nombre está vacío"
+msgstr ""
+
+#: account_register.php:41 account_update.php:41
+msgid "Los apellidos están vacíos"
+msgstr ""
+
+#: account_register.php:47
+msgid "El correo está vacío"
+msgstr ""
+
+#: account_register.php:53
+msgid "El correo no es válido"
+msgstr ""
+
+#: account_register.php:66
+msgid "El usuario "
+msgstr ""
+
+#: account_register.php:66
+msgid " ya existe en la base de datos"
+msgstr ""
+
+#: account_register.php:79
+msgid "El correo no está autorizado para crear un nuevo usuario"
+msgstr ""
+
+#: account_register.php:87 account_update.php:49
+msgid "Los passwords son diferentes"
+msgstr ""
+
+#: account_register.php:94 account_update.php:56
+msgid "El password debe tener al menos "
+msgstr ""
+
+#: account_register.php:94 account_update.php:56
+msgid " carácteres"
+msgstr ""
+
+#: account_register.php:100
+msgid "La cuenta se ha creado,"
+msgstr ""
+
+#: account_register.php:100
+msgid ""
+"por favor, actívala accediendo al link que se te ha enviado por correo a "
+msgstr ""
+
+#: account_register.php:101
+msgid ""
+"<br /><br /> <b>Revisa la carpeta de spam o correo basura</b> si no ves el "
+"correo en la carpeta de entrada."
+msgstr ""
+
+#: account_register.php:102
+msgid "<br />Marca el correo como <b>«No es spam»</b>."
+msgstr ""
+
+#: account_register.php:107
+msgid "Validación de correo"
+msgstr ""
+
+#: account_register.php:108
+msgid "Mensaje Validación correo"
+msgstr ""
+
+#: account_update.php:62
+msgid "Los datos se han actualizado:"
 msgstr ""

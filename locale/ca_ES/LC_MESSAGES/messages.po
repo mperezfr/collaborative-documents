@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-05 16:39+0200\n"
+"POT-Creation-Date: 2017-04-07 10:14+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -213,9 +213,16 @@ msgstr "Pots contactar amb"
 
 #: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:31
 #: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:43
-#, fuzzy
 msgid "Activación de cuenta"
-msgstr "A continuació es mostren"
+msgstr "Activació de conter"
+
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:77
+msgid "El usuario"
+msgstr "L'usuari "
+
+#: /tmp/cache/e6/e66bebb7f261863e77b94c3941e4d274ec4721158902096baa7925a870d66385.php:85
+msgid "se ha activado, ya puedes acceder a la web"
+msgstr "s'ha activat, ja pots accedir a la web "
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:33
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:161
@@ -259,50 +266,50 @@ msgid "Usuario o contraseña incorrecta. Inténtalo otra vez."
 msgstr "Usuari o contrasenya incorrecta"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:152
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:211
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:245
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:208
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:241
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:115
 msgid "Email"
 msgstr "Email"
 
 #: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:156
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:215
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:212
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:121
 msgid "Contraseña"
 msgstr "Contrasenya"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:172
-msgid "Recordar la contraseña"
-msgstr "Recordar la contrasenya"
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:171
+msgid "Recuperar la contraseña"
+msgstr "Recuperar la contrasenya"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:184
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:181
 msgid "Regístrate"
 msgstr "Registra't"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:203
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:200
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:121
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:103
 msgid "Nombre"
 msgstr "Nom"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:207
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:204
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:127
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:109
 msgid "Apellidos"
 msgstr "Cognoms"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:220
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:217
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:140
 msgid "Registrarse"
 msgstr "Registrar-se"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:228
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:225
 #: /tmp/cache/bc/bcc937b5298307bfe1319a985a93eb72c799c77b728e0dd92fb6c5cb0f6c0038.php:35
 #: /tmp/cache/41/414cc6bf7c5c429ccc7d28537f2207a030a66cb7f7725d75d0c5864ca397f3ef.php:148
 msgid "Aviso legal"
 msgstr "Avís legal"
 
-#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:250
+#: /tmp/cache/f7/f7f9492bc022f55321b351c34a9b95c35c51f0de2efaa86eae0893a491e64788.php:246
 msgid "Recuperar contraseña"
 msgstr "Recuperar la contrasenya"
 
@@ -317,18 +324,6 @@ msgstr ""
 "Aquesta pàgina usa <em>cookies</em>, la qual cosa no es cap problema per als "
 "inscrits ni per ningú, \n"
 " cumplim amb el requeriment legal d'avisar."
-
-#: /tmp/cache/e2/e20d844a46ea9657be394d7a9e3b96ffd18ebfefd6b98f23ee05d5a891e6eda2.php:71
-msgid ""
-"El código utilizado en la web ha sido adaptado  por Miguel Pérez (Castelló "
-"en Moviment) a partir del proyecto inicial \n"
-"de <a href=\"https://guillermolazaro.com\" target=\"blank\"> Guillermo "
-"Lázaro </a>."
-msgstr ""
-"El codi utilitzat a la web ha sigut adaptat  per Miguel Pérez (Castelló en "
-"moviment) a partir del projecte inicial \n"
-"de <a href=\"https://guillermolazaro.com\" target=\"blank\"> Guillermo "
-"Lázaro </a>."
 
 #: /tmp/cache/00/00e29bf4592bba60e2a39184c5fd1eedfa7a68b291f2b28dff9e886ca88a8e92.php:33
 msgid "Nueva propuesta"
@@ -439,23 +434,20 @@ msgstr "La pàgina que busques no es troba en aquest servidor"
 
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:33
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:113
-#, fuzzy
 msgid "Actualización de datos"
-msgstr "Validació del correu"
+msgstr "Actualització de dades"
 
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:86
 msgid "Si no quieres cambiar el password, deja los dos campos en blanco"
 msgstr "Si no vols canviar el password, deixa els dos camps en blanc"
 
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:133
-#, fuzzy
 msgid "Nueva Contraseña"
-msgstr "Contrasenya"
+msgstr "Nova Contrasenya"
 
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:137
-#, fuzzy
 msgid "Repetir nueva Contraseña"
-msgstr "Repetir la contrasenya"
+msgstr "Repetir nueva contrasenya"
 
 #: /tmp/cache/51/5157e12357f1ead239d9cc3161f25827010f1b147155296d344618d742ee8717.php:142
 msgid "Actualizar"
@@ -577,72 +569,91 @@ msgstr "He llegit i accepte"
 msgid "las condiciones legales"
 msgstr "les condicions legals"
 
-msgid "Activate your Account"
-msgstr "Activa el teu conter"
-
+#: account_activate.php:25 account_activate.php:57
 msgid ""
-"Este correo no existe o ya ha sido activado o la cadena hash no es "
-"correcta"
+"Este correo no existe o ya ha sido activado o la cadena hash no es correcta"
 msgstr ""
 "Aquest correu no existeix o ja ha estat activat o la cadena hash no és "
 "correcta"
 
-msgid "El usuario "
-msgstr "L'usuari "
-
-msgid "se ha activado, ya puedes acceder a la web "
-msgstr "s'ha activat, ja pots accedir a la web "
-
+#: account_register.php:29
 msgid "Se deben aceptar las "
 msgstr "S'han d'acceptar les "
 
+#: account_register.php:29
 msgid "Condiciones legales"
 msgstr "Condicions legals"
 
+#: account_register.php:35 account_update.php:35
 msgid "El nombre está vacío"
 msgstr "El nom està buit"
 
+#: account_register.php:41 account_update.php:41
 msgid "Los apellidos están vacíos"
 msgstr "Els cognoms estan buits"
 
+#: account_register.php:47
 msgid "El correo está vacío"
 msgstr "El correu està buit"
 
+#: account_register.php:53
 msgid "El correo no es válido"
 msgstr "El correu no és vàlid"
 
+#: account_register.php:66
+msgid "El usuario "
+msgstr "L'usuari "
+
+#: account_register.php:66
 msgid " ya existe en la base de datos"
 msgstr " ja existeis a la base de dades"
 
+#: account_register.php:79
 msgid "El correo no está autorizado para crear un nuevo usuario"
 msgstr "El correu no està autoritzat per a crear un nou usuari"
 
+#: account_register.php:87 account_update.php:49
 msgid "Los passwords son diferentes"
 msgstr "Les contrasenyes son diferents"
 
+#: account_register.php:94 account_update.php:56
 msgid "El password debe tener al menos "
 msgstr "La contrasenya ha de tenir al menys "
 
+#: account_register.php:94 account_update.php:56
 msgid " carácteres"
 msgstr "caràcters"
 
+#: account_register.php:100
 msgid "La cuenta se ha creado,"
 msgstr "El conter s'ha creat,"
 
+#: account_register.php:100
 msgid ""
 "por favor, actívala accediendo al link que se te ha enviado por correo a "
-msgstr ""
-"per favor, activa'l accedint al link que se t'ha enviat per correu a "
+msgstr "per favor, activa'l accedint al link que se t'ha enviat per correu a "
 
+#: account_register.php:101
 msgid ""
-"<br /><br /> <b>Revisa la carpeta de spam o correo basura</b> si no ves "
-"el correo en la carpeta de entrada."
+"<br /><br /> <b>Revisa la carpeta de spam o correo basura</b> si no ves el "
+"correo en la carpeta de entrada."
 msgstr ""
-"<br /><br /> <b>Revisa la carpeta de spam o correu brossa</b> si no veus "
-"el correu a la carpeta d'entrada."
+"<br /><br /> <b>Revisa la carpeta de spam o correu brossa</b> si no veus el "
+"correu a la carpeta d'entrada."
 
+#: account_register.php:102
 msgid "<br />Marca el correo como <b>«No es spam»</b>."
 msgstr "<br />Marca el correu com <b>«No és spam»</b>."
 
+#: account_register.php:107
+msgid "Validación de correo"
+msgstr "Validació de correu"
+
+#: account_register.php:108
 msgid "Mensaje Validación correo"
 msgstr "Missatge de Validació de correu"
+
+#: account_update.php:62
+msgid "Los datos se han actualizado:"
+msgstr "Les dades s'han actualitzat:"
+

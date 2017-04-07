@@ -21,8 +21,8 @@
     {% endfor%}
            
 {% else %}
-  <div class="statusmsg">El usuario {{thisuser['nombre']}} ({{thisuser['email']}}) se ha activado, 
-  ya puedes acceder a la web <a href="{{entity['thisweb']}}">{{entity['thisweb']}}</a></div>
+  <div class="statusmsg">{% trans %}El usuario{% endtrans %} {{thisuser['nombre']}} ({{thisuser['email']}}) 
+  {% trans %}se ha activado, ya puedes acceder a la web{% endtrans %} <a href="{{entity['thisweb']}}">{{entity['thisweb']}}</a></div>
 {% endif%}
 
 {% endblock %}
