@@ -328,15 +328,15 @@
 
 		<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 		        {# Hay que hacerlo así, en caso contrario da error: asignar el título a una variable y poner la variable en trans (con un espacio antes#}
-                <h4 class="titulo-sector"><a href="sector.php?sector={{ sect.key }}">{{sect.title[lang]}}</a> <a data-toggle="modal" href="#{{k}}" class="fa fa-info-circle"></a></h4>
-                <img id="{{ sect.key }}" alt="{{sect.title[lang]}}" class="img-responsive sector" src="{{sect.image}}">
+                <h4 class="titulo-sector"><a href="sector.php?sector={{ sect.key }}">{{sect.title[lang]|striptags}}</a> <a data-toggle="modal" href="#{{k}}" class="fa fa-info-circle"></a></h4>
+                <img id="{{ sect.key }}" alt="{{sect.title[lang]|striptags}}" class="img-responsive sector" src="{{sect.image}}">
             </div>
 		    <div id="{{k}}" class="modal fade">
 		        <div class="modal-dialog">
 		            <div class="modal-content">
 		                <div class="modal-header">
 		                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		                    <h4 class="modal-title">{{sect.title[lang]}}</h4>
+		                    <h4 class="modal-title">{{sect.title[lang]|raw}}</h4>
 		                </div>
 		                <div class="modal-body">
                 <p>{% trans %}En este eje sectorial se debate acerca de:{% endtrans %}</p>

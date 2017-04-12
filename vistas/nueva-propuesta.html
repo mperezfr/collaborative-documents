@@ -66,7 +66,7 @@ $(document).ready(function() {
 		    {% set name = sect.title %}
   			<label class="radio-inline col-xs-3">
 			    <input type="radio" name="sector" id="{{sect.key}}" value="{{sect.key}}" >
-			    {{sect.title[lang]}}</label>
+			    {{sect.title[lang]|raw}}</label>
     {% endfor %}
     
 			    
