@@ -41,11 +41,12 @@ FROM users AS u, prog_propuestas AS p
 WHERE  `autor_id` = u.id and p.sector = :tag
 ORDER BY log DESC; ';
 
+
 $arraytag = array(':tag' => $tag);
 
 $datos = array('tag'=>$etiqueta,'user'=>autentificado(),'propaleatorias'=>listarpreparada($arraytag,$consultaordenaleat),
-               'propuestas'=>listarpreparada($arraytag,$consulta), 'debatidas'=>listarpreparada($arraytag,$debatidas), '
-               recientes'=>listarpreparada($arraytag,$recientes), 'consensuadas'=>listarpreparada($arraytag,$consensuadas),
+               'propuestas'=>listarpreparada($arraytag,$consulta), 'debatidas'=>listarpreparada($arraytag,$debatidas), 
+               'recientes'=>listarpreparada($arraytag,$recientes), 'consensuadas'=>listarpreparada($arraytag,$consensuadas),
                'openProps'=>$openProps, 'lang'=>$lang);
                
 echo $template->render($datos);
