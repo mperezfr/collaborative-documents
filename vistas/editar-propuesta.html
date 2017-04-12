@@ -70,8 +70,8 @@ $(document).ready(function() {
 	{% for k,sect in sectors %}
 		    {% set name = sect.title %}
   			<label class="radio-inline col-xs-3">
-			    <input type="radio" name="sector" id="{{sect.key}}" value="{{sect.key}}" >
-			    {{sect.title[lang]}}</label>
+			    <input type="radio" name="sector" id="{{ k }}" value="{{ k }}" >
+			    {{sect.title[lang]|raw}}</label>
     {% endfor %}
     
 			    

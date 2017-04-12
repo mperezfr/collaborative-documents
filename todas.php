@@ -43,6 +43,6 @@ $datos = array('user'=>autentificado(),
                'debatidas'=>listar($debatidas), 
                'recientes'=>listar($recientes), 
                'consensuadas'=>listar($consensuadas),
-               'openProps'=>$openProps);
+               'openProps'=>$openProps, 'lang'=>$lang);
                
 echo $template->render($datos);
