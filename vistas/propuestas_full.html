@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+
+{% block title %}
+	{% if tag %}
+		{% trans %}Propuestas de {% endtrans %} {{sectors[tag].title[lang]|striptags}} 
+	{%else%}
+		{% trans %}Propuestas de programa{% endtrans %}
+	{% endif %}
+	{% endblock %} 
+{% block scripts %}
+<script>
+$(document).ready(function() {
+	$(".sector").each(function() {
+		var sector = $(this).text();
+		sector = sector.replace(/-/g, ' ');
+		$(this).html('<strong>'+sector+'</strong>');
+	});
+
+	$(".barrio").each(function() {
+		var barrio = $(this).text();
+		if (barrio=="montanana"){
+			barrio=barrio.replace("montanana","montañana");
+		}else{
+			barrio = barrio.replace(/-/g, ' ');
+		}
+		$(this).html('<strong>'+barrio+'</strong>');
+	});
+});
+
+</script>
+{% endblock %}
+{% block content %}
+	<div class="row">
+		<div class="col-xs-12">
+			<h2>{% trans %}Propuestas de programa{% endtrans %}: {{sectors[tag].title[lang]|raw}}</h2>
+		</div>
+	</div>
+
+ 	<div class="row">	
+      <div class="col-xs-12">{% trans %}Hay un total de{% endtrans %} {{ propaleatorias|length }} {% trans %}propuestas{% endtrans %}.</div>
+    </div>
+
+
+	<div class="tab-content">
+
+
+	<div class="tab-pane active" id="aleatorias">
+	{% if propuestasfechasector %}
+	
+		{% for propuesta in propuestasfechasector %}
+
+		<div class="row listado">
+
+				<h1>{{ propuesta.titulo}}</h1>
+				<div class="metadata"><a href="propuesta.php?id={{propuesta.id}}">Enlace a la propuesta</a></div>
+                <div class="metadata">{% trans %}Total votos:{% endtrans %} <strong>{{ propuesta.sum_likes}} </strong> (+{{propuesta.positivos}}/-{{propuesta.negativos}})  {% set suma = (propuesta.positivos / (propuesta.negativos + propuesta.positivos))*100 %} <strong>{{ suma | number_format(2) }} %</strong> {% trans %}de votos positivos de un total de{% endtrans %} {{ propuesta.negativos + propuesta.positivos }} {% trans %}votos.{% endtrans %}
+				</div>
+				<div class="metadata">{% trans %}autor:{% endtrans %} <strong>{{ propuesta.nombre}} {{ propuesta.apellidos}} </strong> | <strong>{{ propuesta.comentarios}}</strong> {% trans %}comentarios{% endtrans %} 
+				</div>
+				<div class="metadata">
+				{% trans %}sector:{% endtrans %}  <a href="sector.php?sector={{propuesta.sector}}"><span class="sector"><strong>{{sectors[propuesta.sector].title[lang]|striptags}}</strong></span></a>
+				{% if propuesta.barrio%}
+					| {% trans %}Barrio:{% endtrans %} <a href="barrio.php?barrio={{propuesta.barrio}}"><span class="barrio"><strong>{{ propuesta.barrio }}</strong></span>
+				{% endif %}
+				<h2>{% trans %}Propuesta{% endtrans %}: </h2> 
+			       {{ propuesta.propuesta|raw }}
+		        </div>
+
+
+	{% if enmiendas %}
+		{% for enmienda in enmiendas %}
+
+		{% if propuesta.id == enmienda.propuesta_id %}
+			
+
+					<div class="enm_autor">
+					{% if enmienda.grupo > 0 %}
+					<img src="static/images/grupo{{ enmienda.grupo}}.png" alt="Grupo {{ enmienda.apellidos}}" title="Grupo {{ enmienda.apellidos}}"> comentario del Grupo {{ enmienda.apellidos}}
+					{% else %}
+						{% if propuesta.autor_id == enmienda.autor_id %}
+						<img src="static/images/insignia.png"> {% trans %}Comentario de{% endtrans %} {{ enmienda.nombre}} {{ enmienda.apellidos}}
+						{% else %}
+						<h3>{% trans %}Comentario de{% endtrans %} {{ enmienda.nombre}} {{ enmienda.apellidos}} - {% trans %}Total votos:{% endtrans %} <strong>{{ enmienda.sum_likes}} </strong> </h3> 
+						{% endif %}
+					{% endif %}
+					</div>
+
+					<div class="metadata">{{ enmienda.enmienda|nl2br}}</div>
+				
+				
+			{% if comentarios %}
+				{% for comentario in comentarios %}
+				{% if comentario.enmienda_id == enmienda.id %}
+
+				<div class="row comentarios">				
+							<div class="com_autor">
+							{% if enmienda.grupo > 0 %}
+							<img src="static/images/grupo{{ enmienda.grupo}}.png" alt="Grupo {{ enmienda.apellidos}}" title="Grupo {{ enmienda.apellidos}}"> Respuesta del Grupo {{ enmienda.apellidos}}
+							{% else %}
+								{% if propuesta.autor_id == comentario.autor_id %}
+								<img src="static/images/insignia.png"> {% trans %}Respuesta de{% endtrans %} {{ comentario.nombre}} {{ comentario.apellidos}}
+								{% else %}
+								<h4>{% trans %}Respuesta de{% endtrans %} {{ comentario.nombre}} {{ comentario.apellidos}}</h4>
+								{% endif %}
+							{% endif %}
+							</div>
+							<div class="metadata">{{ comentario.comentario|nl2br}}</div>
+					</div>
+
+				{% endif %}
+				{% endfor %}
+			{% endif %}
+			<div id="comentario-{{enmienda.id}}"></div>
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+
+
+
+
+
+
+
+
+
+
+        </div>
+			
+		{% endfor %}
+	
+	{% else %}
+		<div class="">{% trans %}No hay propuestas todavía.{% endtrans %} <a href="nueva-propuesta.php">{% trans %}Envíanos la tuya{% endtrans %}</a></div>
+	{% endif %}
+	</div>
+
+
+	</div>
+
+	<script>
+	
+	$('#myTab a').click(function (e) {
+	  	e.preventDefault();
+	  	$(this).tab('show');
+	})
+	</script>
+{% endblock%}
