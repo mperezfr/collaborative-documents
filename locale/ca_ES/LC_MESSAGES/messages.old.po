@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-07 13:39+0200\n"
+"POT-Creation-Date: 2017-04-07 13:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -488,9 +488,11 @@ msgstr "Has votat un total de"
 
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:242
 msgid ""
-"Puedes quitar tu voto accediendo a la propuesta y volviendo a pinchar sobre "
-"el voto que emitiste"
-msgstr "Pots llevar el teu vot accedint a la proposta i tornant a punxar sobre el vot que vas emetre"
+"Puedes quitar el voto dado a una propuesta accediendo a ella y volviendo a "
+"pinchar sobre el voto que emitiste"
+msgstr ""
+"Pots llevar el vot donat a una proposta accedint a ella i tornant a punxar sobre el "
+"vot que vas emetre"
 
 #: /tmp/cache/79/799abd2b9c6fbe5b8221e355d9a7aa1d7baa4c7659d246bf73e32ad417aafc77.php:341
 msgid "No has votado propuestas todavía."
