@@ -49,7 +49,7 @@ $template = $twig->loadTemplate('account_register.html');
         // email is correct?
         }else {
             // email is valid??
-            if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$", trim($email))) {
+            if(!eregi("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,6})$", trim($email))) {
                 array_push($dataproblems,gettext("El correo no es válido"));
                 $allcorrect=false;
             }         
