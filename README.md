@@ -15,13 +15,13 @@ Hay que configurar la conexión con la base de datos y personalizar la aplicaci�
 Configuración
 ==========================
 
-En el fichero vistas/config.html hay que poner:
+En el fichero vistas/config.html hay que poner (se puede crear a partir de vistas/config.default.html):
 * entity: la información referida a la entidad que matiene la web: nombre, web, logo, ...
 * metainfo: información que se pondrá en las etiquetas <meta de la cabecera HTML (<head>)
 * presentationData: Información del título, introducción, etc. para la página principal en los idiomas que se quiera.
 * sectors: Información sobre cada uno de los sectores (categorías) en los que quieren clasificar las propuestas. 
 
-En el fichero static/css/main.css definir colores y tipos de letra
+Crear el fichero static/css/main.css (a partir del static/css/main.default.css) y en el definir colores y tipos de letra
 
 En el fichero colpr-config.php definir las variables de configuración del programa: Base de datos, usuario, contraseña, ...
 se puede definir a partir de colpr-config.default.php 
@@ -33,7 +33,7 @@ usuarios si aparece su correo en la tabla users_can_participate.
 
 En lib/functions.php: Comentar o descomentar // ini_set('display_errors', '1'); para mostrar o no en la web los errores.
 
-En vistas/config.html (legalAdvice) y vistas/aviso-legal.html, poner los avisos legales pertinentes y avisar del uso de cookies.
+En vistas/config.html (legalAdvice) y vistas/aviso-legal.html (se puede crear a partir de vistas/aviso-legal.default.html), poner los avisos legales pertinentes y avisar del uso de cookies.
 
 Sectores
 ------------------------
